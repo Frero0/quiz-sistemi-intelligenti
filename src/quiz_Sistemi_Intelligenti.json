@@ -1,0 +1,1995 @@
+[
+  {
+    "question": "Cos’è una soluzione di un CSP (problema di soddisfacimento di vincoli)?",
+    "options": [
+      "un assegnamento consistente",
+      "una sequenza di passi che permette di raggiungere il goal minimizzando il costo",
+      "un assegnamento di tutte le sue variabili che soddisfa i vincoli"
+    ],
+    "answer": "un assegnamento di tutte le sue variabili che soddisfa i vincoli",
+    "explanation": "Una soluzione di un CSP è un assegnamento completo che soddisfa tutti i vincoli imposti sul problema."
+  },
+  {
+    "question": "Un algoritmo di ricerca di una soluzione in uno spazio degli stati è ottimo quando:",
+    "options": [
+      "restituisce sempre una soluzione di costo minimo",
+      "restituisce sempre una soluzione nel minor numero di passi",
+      "restituisce sempre una soluzione che minimizza il valore di h"
+    ],
+    "answer": "restituisce sempre una soluzione di costo minimo",
+    "explanation": "L’ottimalità si riferisce alla capacità di trovare la soluzione con il costo minimo tra tutte le soluzioni."
+  },
+  {
+    "question": "Associa le seguenti regole di inferenza ai tipi di ragionamento che supportano:",
+    "options": [
+      "modus ponens → forward chaining; risoluzione → ragionamento per refutazione; modus ponens generalizzato → backward chaining FOL",
+      "modus ponens → backward chaining; risoluzione → chaining bidirezionale; modus ponens generalizzato → ragionamento per refutazione",
+      "modus ponens → ragionamento per refutazione; risoluzione → backward chaining; modus ponens generalizzato → forward chaining FOL"
+    ],
+    "answer": "modus ponens → forward chaining; risoluzione → ragionamento per refutazione; modus ponens generalizzato → backward chaining FOL",
+    "explanation": "L’associazione corretta è: modus ponens → forward chaining, risoluzione → refutazione, modus ponens generalizzato → backward chaining FOL."
+  },
+  {
+    "question": "In quale contesto abbiamo parlato di post-pruning?",
+    "options": [
+      "problemi di soddisfacimento di vincoli",
+      "apprendimento automatico",
+      "problemi con avversario"
+    ],
+    "answer": "apprendimento automatico",
+    "explanation": "Il post-pruning è una tecnica utilizzata in apprendimento automatico per semplificare gli alberi di decisione dopo l’addestramento."
+  },
+  {
+    "question": "Il frame problem è:",
+    "options": [
+      "un dominio applicativo del back-jumping",
+      "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
+      "un errore di generalizzazione nel ragionamento per induzione"
+    ],
+    "answer": "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
+    "explanation": "Il frame problem riguarda la difficoltà nel rappresentare ciò che non cambia dopo un’azione in un sistema logico."
+  },
+    {
+      "question": "Da quale dei seguenti insiemi di formule, applicando la regola di risoluzione più volte, ottengo come risultato la formula (not B or C)?",
+      "options": [
+        "(not A and not B and Z), (not Z and D), (not D and C)",
+        "(not A or not B or Z), (not Z or D), (not D or C)",
+        "(A and not B => Z), (Z => D), (D => C)"
+      ],
+      "answer": "(not A or not B or Z), (not Z or D), (not D or C)",
+      "explanation": "Applicando la risoluzione tra (not A or not B or Z) e (not Z or D) si ottiene (not A or not B or D). Poi con (not D or C) si ottiene (not A or not B or C), e quindi (not B or C) come clausola risolvente successiva."
+    },
+    {
+      "question": "L’algoritmo minimax ... (completa scegliendo l’opzione corretta)",
+      "options": [
+        "costruisce un percorso che porta il giocatore Max a vincere",
+        "sceglie la prossima mossa che il giocatore Max dovrebbe eseguire",
+        "costruire un percorso che porta il giocatore Min a perdere"
+      ],
+      "answer": "sceglie la prossima mossa che il giocatore Max dovrebbe eseguire",
+      "explanation": "L’algoritmo minimax esplora l’albero delle decisioni e seleziona la mossa che massimizza il guadagno minimo possibile per il giocatore Max. Non garantisce la vittoria, ma sceglie la mossa ottimale al momento."
+    },
+    {
+      "question": "Cos’è una soluzione di un CSP (problema di soddisfacimento di vincoli)?",
+      "options": [
+        "un assegnamento consistente",
+        "un assegnamento di tutte le sue variabili che soddisfa i vincoli",
+        "una sequenza di passi che permette di raggiungere il goal minimizzando il costo"
+      ],
+      "answer": "un assegnamento di tutte le sue variabili che soddisfa i vincoli",
+      "explanation": "Una soluzione di un CSP è un’assegnazione di valori a tutte le variabili tali che tutti i vincoli siano soddisfatti. La consistenza è una proprietà locale, mentre la soluzione richiede completezza."
+    },
+    {
+      "question": "Il back-jumping è:",
+      "options": [
+        "un algoritmo di ricerca informato",
+        "un’euristica ottimale",
+        "un algoritmo per la soluzione di problemi con vincoli"
+      ],
+      "answer": "un algoritmo per la soluzione di problemi con vincoli",
+      "explanation": "Il back-jumping è una tecnica di miglioramento del backtracking per CSP che permette di risalire oltre l’ultima variabile assegnata in caso di fallimento, saltando direttamente alla variabile responsabile del conflitto."
+    },
+    {
+      "question": "Quale tra i seguenti algoritmi è completo e ottimale, ma può avere una complessità temporale esponenziale?",
+      "options": [
+        "Breadth-First Search",
+        "Depth-First Search",
+        "Hill Climbing",
+        "Greedy Best-First Search"
+      ],
+      "answer": "Breadth-First Search",
+      "explanation": "BFS esplora tutti i nodi a una certa profondità prima di andare più in profondità. È completo e ottimale, ma ha una complessità temporale e spaziale O(b^d)."
+    },
+    {
+      "question": "In un CSP, cosa rappresenta l'arco (X → Y) nell'algoritmo di arc-consistency (AC-3)?",
+      "options": [
+        "Una dipendenza probabilistica",
+        "Un vincolo binario tra X e Y",
+        "Un ordinamento parziale tra X e Y",
+        "Una preferenza tra i domini di X e Y"
+      ],
+      "answer": "Un vincolo binario tra X e Y",
+      "explanation": "Nell'algoritmo AC-3, ogni arco rappresenta un vincolo binario, che impone restrizioni sui valori compatibili delle variabili collegate."
+    },
+    {
+      "question": "Quale strategia si basa sull'applicare prima i vincoli più restrittivi nei CSP?",
+      "options": [
+        "Forward checking",
+        "Backtracking semplice",
+        "Heuristics MRV",
+        "Minimum Remaining Values (MRV)"
+      ],
+      "answer": "Minimum Remaining Values (MRV)",
+      "explanation": "L’euristica MRV sceglie la variabile con il minor numero di valori ancora validi nel dominio, riducendo il branching."
+    },
+    {
+      "question": "In cosa consiste l'inferenza mediante risoluzione in logica proposizionale?",
+      "options": [
+        "Nel derivare nuove clausole applicando l'unificazione su termini atomici",
+        "Nel ridurre una formula alla forma prenessa",
+        "Nel riscrivere le formule in forma normale congiuntiva e applicare la regola di risoluzione",
+        "Nel costruire un albero di decisione"
+      ],
+      "answer": "Nel riscrivere le formule in forma normale congiuntiva e applicare la regola di risoluzione",
+      "explanation": "La risoluzione opera su clausole in CNF e permette di dedurre nuove clausole finché non si ottiene la clausola vuota (⊥), indicando inconsistenza."
+    },
+    {
+      "question": "Quale delle seguenti è una proprietà desiderabile di una funzione euristica h(n)?",
+      "options": [
+        "Che restituisca sempre zero",
+        "Che sovrastimi il costo per raggiungere il goal",
+        "Che sia ammissibile, ovvero non sovrastimi mai il costo reale",
+        "Che dipenda solo dalla profondità del nodo"
+      ],
+      "answer": "Che sia ammissibile, ovvero non sovrastimi mai il costo reale",
+      "explanation": "Una funzione euristica è ammissibile se non sovrastima mai il costo reale per raggiungere il goal. È essenziale per garantire l'ottimalità dell’A*."
+    },
+    {
+      "question": "Il frame problem è:",
+      "options": [
+        "un dominio applicativo del back-jumping",
+        "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
+        "un errore di generalizzazione nel ragionamento per induzione"
+      ],
+      "answer": "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione"
+    },
+    {
+      "question": "In quale contesto abbiamo parlato di relazione 'is-a'?",
+      "options": [
+        "logica del prim'ordine",
+        "ontologie",
+        "situation calculus"
+      ],
+      "answer": "ontologie"
+    },
+    {
+      "question": "Un algoritmo di ricerca di una soluzione in uno spazio degli stati è ottimo quando:",
+      "options": [
+        "restituisce sempre una soluzione che minimizza il valore di h",
+        "restituisce sempre una soluzione nel minor numero di passi",
+        "restituisce sempre una soluzione di costo minimo"
+      ],
+      "answer": "restituisce sempre una soluzione di costo minimo"
+    },
+    {
+      "question": "In un problema di pianificazione, cosa rappresentano i fluenti?",
+      "options": [
+        "Le regole di inferenza logica",
+        "Le variabili che descrivono lo stato del mondo nel tempo",
+        "Le azioni che modificano lo stato del mondo"
+      ],
+      "answer": "Le variabili che descrivono lo stato del mondo nel tempo"
+    },
+    {
+      "question": "Il Situation Calculus è un formalismo per rappresentare:",
+      "options": [
+        "Le euristiche nei problemi di ricerca",
+        "Le relazioni tra insiemi in una base di conoscenza",
+        "L'evoluzione dello stato del mondo a seguito delle azioni"
+      ],
+      "answer": "L'evoluzione dello stato del mondo a seguito delle azioni"
+    },
+  {
+    "question": "Il frame problem è:",
+    "options": [
+      "un dominio applicativo del back-jumping",
+      "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
+      "un errore di generalizzazione nel ragionamento per induzione"
+    ],
+    "answer": "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
+    "explanation": "Il frame problem si riferisce alla difficoltà di rappresentare ciò che non cambia dopo un'azione in un sistema logico."
+  },
+  {
+    "question": "In quale contesto abbiamo parlato di relazione 'is-a'?",
+    "options": [
+      "logica del prim’ordine",
+      "ontologie",
+      "situation calculus"
+    ],
+    "answer": "ontologie",
+    "explanation": "La relazione 'is-a' è tipica delle ontologie, dove si modellano gerarchie concettuali."
+  },
+  {
+    "question": "Un algoritmo di ricerca di una soluzione in uno spazio degli stati è ottimo quando:",
+    "options": [
+      "restituisce sempre una soluzione che minimizza il valore di h",
+      "restituisce sempre una soluzione nel minor numero di passi",
+      "restituisce sempre una soluzione di costo minimo"
+    ],
+    "answer": "restituisce sempre una soluzione di costo minimo",
+    "explanation": "Un algoritmo è ottimo se garantisce il costo minimo tra tutte le soluzioni."
+  },
+  {
+    "question": "In quale contesto abbiamo parlato di post-pruning?",
+    "options": [
+      "apprendimento automatico",
+      "problemi con avversario",
+      "problemi di soddisfacimento di vincoli"
+    ],
+    "answer": "apprendimento automatico",
+    "explanation": "Il post-pruning è una tecnica tipica dell'apprendimento automatico, soprattutto nella potatura di alberi decisionali."
+  },
+  {
+    "question": "Da quale dei seguenti insiemi di formule, applicando la regola di risoluzione più volte, ottengo come risultato la formula (not B or C)?",
+    "options": [
+      "(A and not B => Z), (Z => D), (D => C)",
+      "(not A and not B and Z), (not Z and D), (not D and C)",
+      "(not A or not B or Z), (not Z or D), (not D or C)"
+    ],
+    "answer": "(not A or not B or Z), (not Z or D), (not D or C)",
+    "explanation": "Solo il terzo insieme è già in forma clausal e permette di applicare direttamente la risoluzione per ottenere (¬B ∨ C)."
+  },
+  {
+    "question": "Cos'è una soluzione di un CSP (problema di soddisfacimento di vincoli)?",
+    "options": [
+      "un assegnamento consistente",
+      "una sequenza di passi che permette di raggiungere il goal minimizzando il costo",
+      "un assegnamento di tutte le sue variabili che soddisfa i vincoli"
+    ],
+    "answer": "un assegnamento di tutte le sue variabili che soddisfa i vincoli",
+    "explanation": "Una soluzione di un CSP è un assegnamento completo e consistente con tutti i vincoli."
+  },
+  {
+    "question": "Qual è la differenza tra forward checking e lookahead nei CSP?",
+    "options": [
+      "Nessuna, sono sinonimi",
+      "Forward checking controlla solo il dominio della variabile corrente, mentre lookahead guarda anche quelle future",
+      "Lookahead è usato solo in ricerca non informata"
+    ],
+    "answer": "Forward checking controlla solo il dominio della variabile corrente, mentre lookahead guarda anche quelle future",
+    "explanation": "Il forward checking riduce il dominio delle variabili future direttamente collegate; il lookahead considera anche vincoli tra variabili più distanti."
+  },
+  {
+    "question": "Qual è il vantaggio principale dell’iterative deepening search?",
+    "options": [
+      "Bassa complessità spaziale come DFS, ma completezza come BFS",
+      "Alta velocità di calcolo in grafi densi",
+      "Usa euristiche per trovare la soluzione ottimale"
+    ],
+    "answer": "Bassa complessità spaziale come DFS, ma completezza come BFS",
+    "explanation": "L'iterative deepening unisce i vantaggi di BFS (completezza) e DFS (spazio limitato)."
+  },
+  {
+    "question": "In quale contesto abbiamo parlato di relazione 'is-a'?",
+    "options": [
+      "logica del prim'ordine",
+      "ontologie",
+      "situation calculus"
+    ],
+    "answer": "ontologie",
+    "explanation": "La relazione 'is-a' è tipica delle ontologie, dove si costruiscono gerarchie concettuali (es. un gatto è un animale)."
+  },
+  {
+    "question": "L’algoritmo minimax …",
+    "options": [
+      "costruisce un percorso che porta il giocatore Min a perdere",
+      "sceglie la prossima mossa che il giocatore Max dovrebbe eseguire",
+      "costruisce un percorso che porta il giocatore Max a vincere"
+    ],
+    "answer": "sceglie la prossima mossa che il giocatore Max dovrebbe eseguire",
+    "explanation": "Minimax simula mosse ottimali da parte dei giocatori e sceglie la mossa migliore per Max ipotizzando che Min giochi perfettamente."
+  },
+  {
+    "question": "Associa le seguenti regole di inferenza ai tipi di ragionamento che supportano: risoluzione, modus ponens generalizzato, modus ponens.",
+    "options": [
+      "risoluzione → ragionamento per refutazione, modus ponens generalizzato → forward chaining, modus ponens → backward chaining FOL",
+      "risoluzione → backward chaining FOL, modus ponens generalizzato → forward chaining, modus ponens → ragionamento per refutazione",
+      "risoluzione → forward chaining, modus ponens generalizzato → backward chaining, modus ponens → ragionamento per refutazione"
+    ],
+    "answer": "risoluzione → ragionamento per refutazione, modus ponens generalizzato → forward chaining, modus ponens → backward chaining FOL",
+    "explanation": "La risoluzione è usata nel ragionamento per refutazione. Il modus ponens generalizzato si usa nel forward chaining, mentre il modus ponens è la base del backward chaining in FOL."
+  },
+    {
+      "question": "Da quale dei seguenti insiemi di formule, applicando la regola di risoluzione più volte, ottengo come risultato la formula (¬B ∨ C)?",
+      "options": [
+        "(A and not B => Z), (Z => D), (D => C)",
+        "(not A and not B and Z), (not Z and D), (not D and C)",
+        "(not A or not B or Z), (not Z or D), (not D or C)"
+      ],
+      "answer": "(not A or not B or Z), (not Z or D), (not D or C)",
+      "explanation": "Le formule nella terza opzione sono già in forma di clausole disgiuntive. Applicando la risoluzione in sequenza si ottiene (¬B ∨ C)."
+    },
+    {
+      "question": "In quale contesto abbiamo parlato di post-pruning?",
+      "options": [
+        "apprendimento automatico",
+        "problemi con avversario",
+        "problemi di soddisfacimento di vincoli"
+      ],
+      "answer": "problemi con avversario",
+      "explanation": "Il post-pruning si applica nella costruzione di alberi decisionali in contesti con avversario, per evitare l’overfitting."
+    },
+    {
+      "question": "Che cos'è un albero di decisione nell'apprendimento automatico?",
+      "options": [
+        "Un modello basato su regole di inferenza fuzzy",
+        "Una struttura ad albero che rappresenta le decisioni e le loro possibili conseguenze",
+        "Un grafo diretto aciclico usato per la pianificazione"
+      ],
+      "answer": "Una struttura ad albero che rappresenta le decisioni e le loro possibili conseguenze",
+      "explanation": "Un albero di decisione è una struttura gerarchica che rappresenta sequenze di decisioni e i relativi esiti, molto usato in classificazione."
+    },
+    {
+      "question": "Qual è la complessità temporale dell'algoritmo di ricerca A* nel caso peggiore?",
+      "options": [
+        "Lineare nel numero di nodi",
+        "Esponenziale nel numero di nodi",
+        "Costante, se l’euristica è perfetta"
+      ],
+      "answer": "Esponenziale nel numero di nodi",
+      "explanation": "Nel caso peggiore A* può esplorare un numero esponenziale di nodi, specialmente se l’euristica è poco informativa."
+    },
+    {
+      "question": "Un algoritmo di ricerca di una soluzione in uno spazio degli stati è ottimo quando:",
+      "options": [
+        "restituisce sempre una soluzione che minimizza il valore di h",
+        "restituisce sempre una soluzione nel minor numero di passi",
+        "restituisce sempre una soluzione di costo minimo"
+      ],
+      "answer": "restituisce sempre una soluzione di costo minimo",
+      "explanation": "Un algoritmo è ottimo se restituisce sempre una soluzione con il costo minimo, cioè il cammino meno costoso tra lo stato iniziale e uno stato obiettivo."
+    },
+    {
+      "question": "Quale dei seguenti potrebbe essere un modello nella logica proposizionale?",
+      "options": [
+        "X vale true, Y vale false",
+        "X vale Giovanni, Y vale Riccardo",
+        "X vale 4, Y vale 2"
+      ],
+      "answer": "X vale true, Y vale false",
+      "explanation": "Un modello nella logica proposizionale è un'assegnazione di verità (true o false) alle proposizioni atomiche."
+    },
+    {
+      "question": "Qual è il metodo meno efficiente, in termini di tempo, fra i seguenti algoritmi per risolvere CSP?",
+      "options": [
+        "ricerca con backtracking che sfrutta la commutatività",
+        "generate and test",
+        "back-jumping"
+      ],
+      "answer": "generate and test",
+      "explanation": "Il metodo 'generate and test' esplora molte combinazioni senza guida, quindi è meno efficiente rispetto a metodi più sofisticati come il backtracking o il back-jumping."
+    },
+    {
+      "question": "Quale dei seguenti meccanismi NON serve per indurre regole di classificazione?",
+      "options": [
+        "K nearest neighbour",
+        "Specific to general",
+        "General to specific"
+      ],
+      "answer": "K nearest neighbour",
+      "explanation": "KNN è un algoritmo basato su esempi e non genera esplicitamente regole; gli altri due sono approcci tipici per l’induzione di regole."
+    },
+    {
+      "question": "Quale delle seguenti regole di inferenza permette di implementare la dimostrazione per refutazione?",
+      "options": [
+        "eliminazione del doppio negato",
+        "risoluzione",
+        "modus ponens"
+      ],
+      "answer": "risoluzione",
+      "explanation": "La risoluzione è la tecnica fondamentale per la dimostrazione per refutazione nella logica del primo ordine."
+    },
+    {
+      "question": "Che cosa differenzia un problema di ricerca di una soluzione informata da uno non informato?",
+      "options": [
+        "la presenza di un modello",
+        "la presenza di una funzione costo",
+        "la presenza di una funzione euristica"
+      ],
+      "answer": "la presenza di una funzione euristica",
+      "explanation": "La differenza principale è l’uso di una funzione euristica, che guida la ricerca verso la soluzione in modo più efficiente."
+    },
+    {
+      "question": "L'algoritmo minimax ... (completa scegliendo l’opzione corretta)",
+      "options": [
+        "costruire un percorso che porta il giocatore Min a perdere",
+        "sceglie la prossima mossa che il giocatore Max dovrebbe eseguire",
+        "costruisce un percorso che porta il giocatore Max a vincere"
+      ],
+      "answer": "sceglie la prossima mossa che il giocatore Max dovrebbe eseguire",
+      "explanation": "L'algoritmo minimax valuta le mosse possibili e sceglie la migliore per Max assumendo che Min giochi ottimamente, cioè minimizzando il massimo danno."
+    },
+    {
+      "question": "Il frame problem è:",
+      "options": [
+        "un dominio applicativo del back-jumping",
+        "un errore di generalizzazione nel ragionamento per induzione",
+        "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell’applicazione di un’azione"
+      ],
+      "answer": "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell’applicazione di un’azione",
+      "explanation": "Il frame problem riguarda la difficoltà di rappresentare ciò che resta invariato dopo un'azione senza doverlo specificare esplicitamente per ogni fluente."
+    },
+  {
+    "question": "Considera le formule:\n1) not Ottone(x) or Percussione(x) or not Arco(x)\n2) Ottone(IDO)\nQuale tra le seguenti affermazioni è corretta rispetto all'applicazione della regola di risoluzione?",
+    "options": [
+      "L’unificatore è {x/IDO}",
+      "La risoluzione non è applicabile",
+      "Risolvente: Ottone(IDO)",
+      "Risolvente: Percussione(IDO) or not Arco(IDO)",
+      "Risolvente: Percussione(x) or not Arco(x)"
+    ],
+    "answer": ["L’unificatore è {x/IDO}", "Risolvente: Percussione(IDO) or not Arco(IDO)"],
+    "explanation": "L’unificatore {x/IDO} è corretto perché permette di unificare Ottone(x) con Ottone(IDO). La risoluzione è applicabile e produce il risolvente Percussione(IDO) or not Arco(IDO). Le altre affermazioni sono errate: 'Ottone(IDO)' non è un risolvente, e 'Percussione(x) or not Arco(x)' non tiene conto dell’unificazione."
+  },
+  {
+    "question": "Considera le formule:\n1) Leone(AXEL) or not Carnivoro(AXEL)\n2) not Leone(x) or Infermiere(x)\nQuale tra le seguenti affermazioni è corretta rispetto all'applicazione della regola di risoluzione?",
+    "options": [
+      "Risolvente: Leone(AXEL) and Carnivoro(AXEL)",
+      "La risoluzione è applicabile",
+      "Risolvente: not Carnivoro(AXEL) or Infermiere(AXEL)",
+      "L’unificatore non esiste",
+      "Risolvente: not Carnivoro(AXEL) and Baobab(AXEL)"
+    ],
+    "answer": ["La risoluzione è applicabile", "Risolvente: not Carnivoro(AXEL) or Infermiere(AXEL)"],
+    "explanation": "La risoluzione è applicabile perché si può unificare Leone(AXEL) con Leone(x) usando {x/AXEL}. Il risolvente risultante è not Carnivoro(AXEL) or Infermiere(AXEL). Le altre affermazioni sono errate: l’unificatore esiste, 'and' non è il connettivo della risoluzione (che usa 'or'), e 'Baobab(AXEL)' non appare in nessuna formula."
+  },
+    {
+      "question": "La formula A) not Alfa(x) or Beta(x) or not Gamma(x) è una clausola di Horn?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "Sì",
+      "explanation": "È una clausola di Horn perché contiene al massimo un letterale positivo (in questo caso, Beta(x))."
+    },
+    {
+      "question": "Il forward chaining è applicabile alle formule: A) not Alfa(x) or Beta(x) or not Gamma(x), B) Alfa(ID0), C) Gamma(ID0)?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Il forward chaining richiede che tutte le clausole siano definite come implicazioni con testa singola positiva. La formula A ha più letterali negativi, quindi non è direttamente adatta al forward chaining."
+    },
+    {
+      "question": "La formula A) not Alfa(x) or Beta(x) or not Gamma(x) è una clausola?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "Sì",
+      "explanation": "Sì, perché una clausola è una disgiunzione di letterali, e la formula A è una disgiunzione di tre letterali (uno positivo e due negativi)."
+    },
+    {
+      "question": "La risoluzione è applicabile alle formule: A) not Alfa(x) or Beta(x) or not Gamma(x), B) Alfa(ID0), C) Gamma(ID0)?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "Sì",
+      "explanation": "La risoluzione è applicabile perché è possibile unificare Alfa(x) con Alfa(ID0) e Gamma(x) con Gamma(ID0), ottenendo nuove clausole da derivare."
+    },
+    {
+      "question": "Il modus ponens generalizzato è applicabile alle formule: A) not Alfa(x) or Beta(x) or not Gamma(x), B) Alfa(ID0), C) Gamma(ID0)?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Il modus ponens generalizzato richiede che le clausole siano implicazioni ben formate con singola testa. La formula A ha più letterali negativi, quindi non è adatta per questa inferenza."
+    },
+    {
+      "question": "La formula A) not Alfa(ID1) or not Beta(x) or Gamma(x) è una clausola di Horn?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Non è una clausola di Horn, poiché contiene due letterali positivi: Gamma(x) e non letterali negativi in numero tale da violare la definizione (Horn richiede al massimo un positivo)."
+    },
+    {
+      "question": "Si può derivare Gamma(ID1) dalle formule: A) not Alfa(ID1) or not Beta(x) or Gamma(x), B) Alfa(ID0), C) Beta(ID1)?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Non è possibile derivare Gamma(ID1) perché manca l'unificazione completa: Alfa(ID0) non è sufficiente per risolvere not Alfa(ID1) e ottenere la testa Gamma(ID1)."
+    },
+    {
+      "question": "Cosa afferma il test di Turing per definire l'intelligenza di un computer?",
+      "options": [
+        "Comprende le domande che gli vengono poste",
+        "Risponde correttamente alle domande che gli vengono poste",
+        "Imita il comportamento umano nel rispondere alle domande"
+      ],
+      "answer": "Imita il comportamento umano nel rispondere alle domande",
+      "explanation": "Il test di Turing definisce un computer intelligente se riesce a imitare il comportamento umano nel rispondere, rendendo indistinguibile la sua risposta da quella di un essere umano."
+    },
+    {
+      "question": "Quale criterio può essere usato per terminare la costruzione di un albero di decisione?",
+      "options": [
+        "Il valore della funzione di valutazione calcolata nel nodo è maggiore di una certa soglia",
+        "Il numero delle istanze associate al nodo è minore di una certa soglia",
+        "Il nodo presenta overfitting"
+      ],
+      "answer": "Il numero delle istanze associate al nodo è minore di una certa soglia",
+      "explanation": "Un albero di decisione può fermarsi quando il numero di istanze in un nodo scende sotto una soglia, perché non ha più senso suddividerle ulteriormente."
+    },
+    {
+      "question": "Quale affermazione è vera considerando RDF (Resource Description Framework)?",
+      "options": [
+        "La conoscenza è costituita da triple <soggetto, predicato, oggetto>",
+        "La conoscenza è costituita da relazioni IS-A e MEMBER",
+        "La conoscenza è costituita da clausole di Horn"
+      ],
+      "answer": "La conoscenza è costituita da triple <soggetto, predicato, oggetto>",
+      "explanation": "RDF rappresenta la conoscenza tramite triple del tipo <soggetto, predicato, oggetto> ed è uno standard del web semantico."
+    },
+    {
+      "question": "Quale misura si calcola utilizzando una matrice di confusione?",
+      "options": [
+        "Accuratezza",
+        "Information gain",
+        "Entropia"
+      ],
+      "answer": "Accuratezza",
+      "explanation": "L'accuratezza è una misura calcolata direttamente dalla matrice di confusione e rappresenta la proporzione di predizioni corrette sul totale."
+    },
+    {
+      "question": "Quale configurazione nella matrice di confusione indica prestazioni ottimali?",
+      "options": [
+        "Diagonale principale che somma al numero delle istanze elaborate, 0 in tutte le altre celle",
+        "Ogni cella contiene il numero di istanze della classe diviso l'entropia",
+        "Distribuzione uniforme del numero di istanze su tutte le celle"
+      ],
+      "answer": "Diagonale principale che somma al numero delle istanze elaborate, 0 in tutte le altre celle",
+      "explanation": "Una matrice ideale ha tutti i valori sulla diagonale principale (corrette classificazioni) e zero nelle celle fuori diagonale (errori)."
+    },
+    {
+      "question": "Cos'è un modello generativo in intelligenza artificiale?",
+      "options": [
+        "Un modello che genera nuove istanze a partire da dati appresi",
+        "Un modello che classifica dati in categorie note",
+        "Un algoritmo di ricerca euristica",
+        "Un sistema basato su regole logiche"
+      ],
+      "answer": "Un modello che genera nuove istanze a partire da dati appresi",
+      "explanation": "I modelli generativi, come le GAN o i modelli linguistici, sono progettati per apprendere la distribuzione dei dati e generare nuove istanze simili."
+    },
+    {
+      "question": "In che modo si differenzia un classificatore da un generatore?",
+      "options": [
+        "Il classificatore assegna etichette a dati esistenti, il generatore crea nuovi dati",
+        "Il classificatore genera nuovi dati a partire da etichette",
+        "Il generatore serve per ottimizzare iperparametri",
+        "Non c'è differenza"
+      ],
+      "answer": "Il classificatore assegna etichette a dati esistenti, il generatore crea nuovi dati",
+      "explanation": "Il classificatore è discriminativo, assegna una categoria; il generatore è generativo, crea nuovi esempi verosimili basati su dati appresi."
+    },
+    {
+      "question": "Quale delle seguenti è una tecnica comunemente usata nei modelli generativi?",
+      "options": [
+        "Discesa del gradiente",
+        "Reti neurali convoluzionali",
+        "Generative Adversarial Networks (GAN)",
+        "Ricerca in ampiezza"
+      ],
+      "answer": "Generative Adversarial Networks (GAN)",
+      "explanation": "Le GAN sono un tipo di modello generativo molto diffuso che utilizza due reti (generatore e discriminatore) in competizione per generare dati realistici."
+    },
+    {
+      "question": "Nel contesto delle regole di inferenza in logica, cos'è il modus ponens?",
+      "options": [
+        "Un metodo per falsificare una proposizione",
+        "Una regola che permette di dedurre B da 'A implica B' e A",
+        "Una tecnica euristica per ottimizzazione",
+        "Un algoritmo per la ricerca in profondità"
+      ],
+      "answer": "Una regola che permette di dedurre B da 'A implica B' e A",
+      "explanation": "Il modus ponens è una delle principali regole di inferenza: se A è vero e A implica B, allora anche B è vero."
+    },
+    {
+      "question": "Qual è la caratteristica delle clausole di Horn che le rende utili per l'inferenza logica?",
+      "options": [
+        "Contengono solo proposizioni negative",
+        "Contengono al più un letterale positivo",
+        "Sono prive di quantificatori",
+        "Possono esprimere contraddizioni"
+      ],
+      "answer": "Contengono al più un letterale positivo",
+      "explanation": "Le clausole di Horn sono efficienti per l'inferenza perché strutturate in modo che contengano al massimo un letterale positivo, rendendo la deduzione logica computazionalmente efficiente."
+    },
+    {
+      "question": "Quale tecnica consente di eseguire inferenza logica in avanti a partire dai fatti noti?",
+      "options": [
+        "Backward chaining",
+        "Forward chaining",
+        "Risoluzione per refutazione",
+        "Cutoff depth search"
+      ],
+      "answer": "Forward chaining",
+      "explanation": "Il forward chaining parte dai fatti e applica regole per inferire nuove informazioni, fino a raggiungere l’obiettivo o esaurire le regole applicabili."
+    },
+    {
+      "question": "È applicabile il modus ponens generalizzato con le seguenti formule?\n1) Sensibile(Anna, w)\n2) Ingrediente(w, r)\n3) Sensibile(x, z) ∧ Ingrediente(z, y) → Sensibile(x, y)",
+      "options": [
+        "Sì, con la sostituzione x/Anna, z/w",
+        "No, il modus ponens non è applicabile",
+        "Sì, con la sostituzione x/Anna, y/w"
+      ],
+      "answer": "Sì, con la sostituzione x/Anna, z/w",
+      "explanation": "La sostituzione x/Anna e z/w consente di unificare l’implicazione con i fatti dati. Applicando il modus ponens generalizzato si può dedurre Sensibile(Anna, y) con y=r."
+    },
+    {
+      "question": "Gli agenti reattivi semplici sono adatti a problemi completamente osservabili?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "Sì",
+      "explanation": "Gli agenti reattivi semplici funzionano correttamente solo in ambienti completamente osservabili, dove la percezione fornisce informazioni complete sullo stato dell’ambiente."
+    },
+    {
+      "question": "Gli agenti sono intelligenti?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Non tutti gli agenti sono intelligenti: esistono anche agenti semplici e reattivi che non hanno capacità di apprendimento o pianificazione avanzata."
+    },
+    {
+      "question": "È possibile applicare il forward chaining alle seguenti formule?\nA) not Alfa(x) or Beta(x) or not Gamma(x)\nB) Alfa(ID0)\nC) Gamma(ID0)",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Il forward chaining si applica solo a clausole di Horn con al più un letterale positivo. La formula A contiene più letterali positivi (Beta e Gamma), quindi non è adatta."
+    },
+    {
+      "question": "Quale dei seguenti criteri può essere un criterio di scelta del prossimo split nella costruzione di alberi di decisione?",
+      "options": [
+        "Il numero delle istanze associate al nodo è minore di una certa soglia",
+        "L’information gain è massimo",
+        "Lo split separa le istanze di una classe da tutte le altre"
+      ],
+      "answer": "Il numero delle istanze associate al nodo è minore di una certa soglia",
+      "explanation": "Un criterio pratico di stop è basato sulla soglia minima di istanze in un nodo: se il numero di esempi è troppo basso, non ha senso continuare a suddividere."
+    },
+    {
+      "question": "Quale delle seguenti misure viene calcolata tramite una matrice di confusione?",
+      "options": [
+        "accuratezza",
+        "information gain",
+        "entropia"
+      ],
+      "answer": "accuratezza",
+      "explanation": "La matrice di confusione serve per calcolare metriche come accuratezza, precisione, richiamo e F1-score. Information gain ed entropia si usano per la costruzione degli alberi decisionali."
+    },
+    {
+      "question": "La formula Alfa(x) or not Beta(x) or not Gamma(x) è una clausola di Horn?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Una clausola di Horn può avere al massimo un letterale positivo. Qui ci sono due letterali positivi: Alfa(x) e Beta(x) negato è un letterale positivo se la clausola è vista come implicazione."
+    },
+    {
+      "question": "Quale criterio può essere usato per decidere lo split in un albero decisionale secondo quanto mostrato?",
+      "options": [
+        "Il numero delle istanze associate al nodo è minore di una certa soglia",
+        "L'information gain è massimo",
+        "Lo split separa le istanze di una classe da tutte le altre"
+      ],
+      "answer": "Il numero delle istanze associate al nodo è minore di una certa soglia",
+      "explanation": "Il criterio usato nella domanda è basato su una soglia minima di istanze per procedere con lo split, non sull'information gain o separazione tra classi."
+    },
+    {
+      "question": "Quale delle seguenti è un’euristica ammissibile in un algoritmo di ricerca informata?",
+      "options": [
+        "Una che sovrastima il costo reale",
+        "Una che sottostima il costo reale",
+        "Una che ignora completamente il costo"
+      ],
+      "answer": "Una che sottostima il costo reale",
+      "explanation": "Un’euristica è ammissibile se non sovrastima mai il costo reale per raggiungere lo stato obiettivo, quindi fornisce una stima inferiore o uguale al costo vero."
+    },
+    {
+      "question": "Quale delle seguenti misure viene calcolata tramite una matrice di confusione?",
+      "options": [
+        "accuratezza",
+        "information gain",
+        "entropia"
+      ],
+      "answer": "accuratezza",
+      "explanation": "La matrice di confusione viene utilizzata per calcolare misure come accuratezza, precisione, richiamo e F1-score, non information gain o entropia."
+    },
+    {
+      "question": "La formula 'not Alfa(x) or not Beta(x) or not Gamma(x)' è una clausola?",
+      "options": [
+        "Vero",
+        "Falso"
+      ],
+      "answer": "Vero",
+      "explanation": "Una clausola è una disgiunzione di letterali. Anche se tutti i letterali sono negativi, si tratta comunque di una clausola valida."
+    },
+      {
+        "question": "La formula 'not Alfa(x) or not Beta(x) or not Gamma(x)' è una clausola di Horn?",
+        "options": [
+          "Vero",
+          "Falso"
+        ],
+        "answer": "Falso",
+        "explanation": "Una clausola di Horn contiene al massimo un letterale positivo. Qui non ce ne sono, quindi non è una clausola di Horn."
+      },
+      {
+        "question": "Quale delle seguenti euristiche è ammissibile?",
+        "options": [
+          "Una che non sovrastima mai il costo al goal",
+          "Una che sceglie la variabile con più vincoli",
+          "Una che seleziona la variabile con meno domini residui"
+        ],
+        "answer": "Una che non sovrastima mai il costo al goal",
+        "explanation": "Un'euristica ammissibile non sovrastima mai il costo del cammino rimanente verso la soluzione, garantendo optimalità."
+      },
+      {
+        "question": "Quale delle seguenti è una strategia euristica per i problemi CSP?",
+        "options": [
+          "Minimum Remaining Values",
+          "Information Gain",
+          "Forward Chaining"
+        ],
+        "answer": "Minimum Remaining Values",
+        "explanation": "La MRV (Minimum Remaining Values) è una strategia che seleziona la variabile con meno valori possibili rimanenti, utile nei CSP."
+      },
+      {
+        "question": "La formula 'not Predicato1(x) or Predicato2(x) or not Predicato3(x)' è una clausola di Horn?",
+        "options": [
+          "Vero",
+          "Falso"
+        ],
+        "answer": "Falso",
+        "explanation": "Le clausole di Horn possono avere al massimo un letterale positivo. In questo caso ci sono due letterali negativi e uno positivo, quindi non è una clausola di Horn."
+      },
+      {
+        "question": "Cos’è una SOLUZIONE nella risoluzione automatica di problemi?",
+        "options": [
+          "Un percorso, nell’albero o grafo di ricerca, che conduce dal nodo iniziale a un nodo target",
+          "Un qualsiasi stato dell’albero o grafo di ricerca che rende vero il test obiettivo",
+          "Un assegnamento di valori alle variabili che definiscono il problema di ricerca"
+        ],
+        "answer": "Un percorso, nell’albero o grafo di ricerca, che conduce dal nodo iniziale a un nodo target",
+        "explanation": "La soluzione è un cammino (percorso) che collega lo stato iniziale a uno stato obiettivo."
+      },
+      {
+        "question": "Un algoritmo di ricerca è detto BLIND quando:",
+        "options": [
+          "Ha un orizzonte di ricerca limitato",
+          "Utilizza solo la descrizione del problema per trovare una soluzione",
+          "Utilizza una funzione euristica che non è ammissibile"
+        ],
+        "answer": "Utilizza solo la descrizione del problema per trovare una soluzione",
+        "explanation": "La ricerca 'blind' (o non informata) si basa unicamente sulla struttura del problema, senza usare euristiche."
+      },
+      {
+        "question": "Un’euristica è detta DOMINANTE quando:",
+        "options": [
+          "Restituisce sempre stime per difetto del costo per raggiungere un nodo preferito da quello considerato",
+          "Rispetta la disuguaglianza triangolare",
+          "Per qualsiasi stato assume valori maggiori a quelli restituiti da un’altra euristica"
+        ],
+        "answer": "Per qualsiasi stato assume valori maggiori a quelli restituiti da un’altra euristica",
+        "explanation": "Un'euristica dominante fornisce stime sempre maggiori o uguali rispetto a un'altra euristica su tutti gli stati."
+      },
+        {
+          "question": "Soltanto una delle seguenti MISURE può essere calcolata tramite una MATRICE DI CONFUSIONE. Quale?",
+          "options": [
+            "Accuratezza",
+            "Livello di confidenza",
+            "Entropia"
+          ],
+          "answer": "Accuratezza",
+          "explanation": "L’accuratezza si calcola direttamente dalla matrice di confusione usando TP, TN, FP e FN."
+        },
+        {
+          "question": "Un algoritmo di apprendimento è supervisionato quando:",
+          "options": [
+            "Il learning set contiene tutte istanze che hanno associata la classe di appartenenza",
+            "Durante l’apprendimento è monitorato da un supervisore umano",
+            "L’apprendimento è guidato dalla misura dell’entropia"
+          ],
+          "answer": "Il learning set contiene tutte istanze che hanno associata la classe di appartenenza",
+          "explanation": "In un apprendimento supervisionato, ogni istanza nel training set ha una label nota (classe di appartenenza)."
+        },
+    {
+      "question": "Quale fa parte della definizione di agente?",
+      "options": [
+        "euristica",
+        "attuazione",
+        "valutazione"
+      ],
+      "answer": "attuazione",
+      "explanation": "Un agente è definito da percezione, attuazione (capacità di agire nell’ambiente) e una funzione agente. 'Attuazione' è quindi una parte fondamentale della definizione."
+    },
+    {
+      "question": "Quale di questi è una relazione tra insiemi di modelli?",
+      "options": [
+        "conseguenza logica",
+        "forward chaining",
+        "MPG"
+      ],
+      "answer": "conseguenza logica",
+      "explanation": "La conseguenza logica riguarda l’implicazione tra insiemi di modelli, cioè se un insieme di modelli soddisfa una formula, allora implica logicamente un altro insieme di modelli."
+    },
+    {
+      "question": "Dove è necessaria la CNF?",
+      "options": [
+        "risoluzione",
+        "forward chaining",
+        "modus ponens generalizzato"
+      ],
+      "answer": "risoluzione",
+      "explanation": "La forma normale congiuntiva (CNF) è necessaria per l’applicazione dell’algoritmo di risoluzione, fondamentale nel ragionamento deduttivo automatico."
+    },
+    {
+      "question": "Il backward chaining:",
+      "options": [
+        "è guidato dal goal verso i dati",
+        "si usa in CSP",
+        "è guidato dai dati verso il goal"
+      ],
+      "answer": "è guidato dal goal verso i dati",
+      "explanation": "Il backward chaining parte da un obiettivo e cerca di dimostrare che esso è vero, cercando i fatti e le regole che possono condurre ad esso (top-down)."
+    },
+    {
+      "question": "In che contesto viene studiato il problema dell’OR esclusivo?",
+      "options": [
+        "CSP",
+        "reti neurali",
+        "forward chaining"
+      ],
+      "answer": "reti neurali",
+      "explanation": "Il problema dell’OR esclusivo (XOR) è noto per non essere linearmente separabile e viene studiato nel contesto delle reti neurali per mostrare i limiti dei percettroni semplici."
+    },
+    {
+      "question": "F(x) è una funzione di Skolem?",
+      "options": [
+        "Vero",
+        "Falso"
+      ],
+      "answer": "Vero",
+      "explanation": "F(x) è una funzione introdotta nel processo di skolemizzazione, dove le variabili esistenziali vengono sostituite con funzioni dipendenti dalle variabili universali."
+    },
+    {
+      "question": "Nel CSP con colori R e V, l'assegnamento {A=R, B=V, D=V} è:",
+      "options": [
+        "è una soluzione",
+        "è un assegnamento consistente",
+        "non è un assegnamento consistente"
+      ],
+      "answer": "è un assegnamento consistente",
+      "explanation": "L’assegnamento è consistente con i vincoli di colorazione (colori diversi tra adiacenti), ma non è una soluzione completa perché manca almeno un nodo (es. C)."
+    },
+    {
+      "question": "Nel CSP con {A=R, B=V, D=V, C=R}, questo assegnamento è:",
+      "options": [
+        "è una soluzione",
+        "è un assegnamento consistente",
+        "non è un assegnamento consistente"
+      ],
+      "answer": "è una soluzione",
+      "explanation": "Tutti i nodi sono assegnati e rispettano i vincoli di colorazione (nessun adiacente ha lo stesso colore), quindi l’assegnamento è una soluzione completa e valida."
+    },
+    {
+      "question": "Se il dominio di B è {R} e quello di C è {R}, l'arco da C a B è arc-consistente?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "No",
+      "explanation": "Entrambi i nodi hanno solo 'R' come valore, quindi se c’è un vincolo di diversità (C ≠ B), non esiste una coppia di valori compatibili → l’arco non è arc-consistente."
+    },
+    {
+      "question": "Se il dominio di B è {R} e quello di C è {V}, l'arco da B a C è arc-consistente?",
+      "options": [
+        "Sì",
+        "No"
+      ],
+      "answer": "Sì",
+      "explanation": "Se B può essere R e C può essere V, allora esiste una coppia (B=R, C=V) che soddisfa il vincolo di diversità → l’arco è arc-consistente."
+    },
+    {
+      "question": "Quale tra le seguenti è una tecnica di refutazione nel calcolo proposizionale?",
+      "options": [
+        "Model Checking",
+        "Forward Chaining",
+        "Binary Resolution",
+        "Backward Chaining"
+      ],
+      "answer": "Binary Resolution",
+      "explanation": "La Binary Resolution è una tecnica usata per la refutazione automatica nei sistemi basati sulla logica proposizionale e FOL."
+    },
+    {
+      "question": "Nel contesto della FOL (First Order Logic), il metodo di risoluzione è associato a:",
+      "options": [
+        "Model Checking",
+        "Refutazione",
+        "Costruzione di grafi",
+        "Ottimizzazione euristica"
+      ],
+      "answer": "Refutazione",
+      "explanation": "La risoluzione è una tecnica di inferenza usata per dimostrare che un insieme di formule è insoddisfacibile, ossia per la refutazione."
+    },
+    {
+      "question": "Quale tecnica è tipicamente associata alla forward chaining nel calcolo proposizionale?",
+      "options": [
+        "Modelli basati su conoscenza",
+        "Metodo di risoluzione",
+        "Modello di Markov",
+        "Modus Ponens"
+      ],
+      "answer": "Modus Ponens",
+      "explanation": "Nel calcolo proposizionale, la forward chaining applica il Modus Ponens per dedurre nuove conoscenze a partire da fatti noti."
+    },
+    {
+      "question": "Cosa indica la relazione 'isa' in un'ontologia?",
+      "options": [
+        "Relazione tra istanze",
+        "Relazione di equivalenza",
+        "Relazione di sottoclasse",
+        "Relazione di proprietà"
+      ],
+      "answer": "Relazione di sottoclasse",
+      "explanation": "La relazione 'isa' in una tassonomia o ontologia esprime un legame di sottoclasse, es. 'gatto isa mammifero'."
+    },
+    {
+      "question": "Che tipo di relazione esprime 'part-of' in un'ontologia?",
+      "options": [
+        "Relazione di sottoclasse",
+        "Relazione di istanza",
+        "Relazione di composizione",
+        "Relazione causale"
+      ],
+      "answer": "Relazione di composizione",
+      "explanation": "'part-of' rappresenta una relazione di composizione: una parte appartiene a un intero, come 'motore part-of auto'."
+    },
+    {
+      "question": "Il metodo alpha-beta pruning si applica a quale tipo di algoritmo?",
+      "options": [
+        "Ricerca euristica informata",
+        "Algoritmi genetici",
+        "Algoritmi di clustering",
+        "Algoritmo Minimax"
+      ],
+      "answer": "Algoritmo Minimax",
+      "explanation": "L'alpha-beta pruning è un miglioramento del Minimax che riduce il numero di nodi valutati in un albero di gioco."
+    },
+    {
+      "question": "Nel contesto del CSP (Constraint Satisfaction Problem), il backjumping è:",
+      "options": [
+        "Un metodo euristico per lo scheduling",
+        "Un metodo per il clustering",
+        "Un'ottimizzazione della ricerca per tornare più indietro in caso di errore",
+        "Una tecnica di validazione del modello"
+      ],
+      "answer": "Un'ottimizzazione della ricerca per tornare più indietro in caso di errore",
+      "explanation": "Il backjumping è una tecnica che permette di saltare più indietro del normale backtracking per evitare rami inutili."
+    },
+    {
+      "question": "Quale algoritmo combina completezza della BFS e basso uso di memoria della DFS?",
+      "options": [
+        "RBFS",
+        "Minimax",
+        "Iterative Deepening",
+        "Beam Search"
+      ],
+      "answer": "Iterative Deepening",
+      "explanation": "L'Iterative Deepening Search effettua più DFS con profondità crescente, unendo vantaggi di BFS e DFS."
+    },
+    {
+      "question": "Nella matrice di confusione, dove si trovano le istanze correttamente classificate?",
+      "options": [
+        "Sotto la diagonale",
+        "Sopra la diagonale",
+        "Lungo la diagonale",
+        "Fuori dalla diagonale"
+      ],
+      "answer": "Lungo la diagonale",
+      "explanation": "Le predizioni corrette si trovano sulla diagonale principale della matrice di confusione."
+    },
+    {
+      "question": "In una tassonomia, le sottocategorie di una categoria costituiscono:",
+      "options": [
+        "Un cluster",
+        "Una classe",
+        "Una partizione",
+        "Un insieme fuzzy"
+      ],
+      "answer": "Una partizione",
+      "explanation": "Le sottocategorie costituiscono una partizione se sono disgiunte e coprono l’intero insieme della categoria."
+    },
+    {
+      "question": "Qual è la differenza tra forward e backward chaining?",
+      "options": [
+        "Forward parte dagli obiettivi, backward dai fatti",
+        "Backward è usato solo nella logica proposizionale",
+        "Forward parte dai fatti, backward dagli obiettivi",
+        "Backward non è un metodo di inferenza"
+      ],
+      "answer": "Forward parte dai fatti, backward dagli obiettivi",
+      "explanation": "Nel forward chaining si deduce partendo dai fatti, nel backward si parte da un obiettivo da dimostrare."
+    },
+    {
+      "question": "Il 'frame problem' in IA riguarda:",
+      "options": [
+        "La gestione della memoria durante l'esecuzione",
+        "La rappresentazione delle conseguenze non modificate di un'azione",
+        "La struttura degli alberi di decisione",
+        "La segmentazione delle immagini"
+      ],
+      "answer": "La rappresentazione delle conseguenze non modificate di un'azione",
+      "explanation": "Il frame problem riguarda come rappresentare che il mondo non cambia tranne dove l’azione ha effetto."
+    },
+    {
+      "question": "Il perceptron fallisce nella classificazione di:",
+      "options": [
+        "Funzioni linearmente separabili",
+        "AND logico",
+        "OR logico",
+        "OR esclusivo (XOR)"
+      ],
+      "answer": "OR esclusivo (XOR)",
+      "explanation": "Il perceptron semplice non può apprendere funzioni non linearmente separabili come l’XOR."
+    },
+    {
+      "question": "La funzione euristica in A* deve essere:",
+      "options": [
+        "Negativa",
+        "Ottimistica (ammettere errori)",
+        "Consistente e ammissibile",
+        "Costante su tutti i nodi"
+      ],
+      "answer": "Consistente e ammissibile",
+      "explanation": "Affinché A* sia ottimale, l’euristica deve essere ammissibile (mai sovrastimare) e consistente (triangolare)."
+    },
+    {
+      "question": "La tecnica RBFS (Recursive Best First Search) appartiene alla categoria degli algoritmi:",
+      "options": [
+        "Non informati",
+        "Informati",
+        "Stocastici",
+        "Evolutivi"
+      ],
+      "answer": "Informati",
+      "explanation": "RBFS è un algoritmo informato che utilizza euristiche per guidare la ricerca verso il goal in modo efficiente."
+    },
+    {
+      "question": "Che cosa rappresenta il branching factor in un albero di ricerca?",
+      "options": [
+        "La profondità massima dell’albero",
+        "Il numero medio di figli per nodo",
+        "Il numero di foglie",
+        "Il numero di nodi radice"
+      ],
+      "answer": "Il numero medio di figli per nodo",
+      "explanation": "Il branching factor indica quanti figli ha in media ciascun nodo; è importante per stimare la complessità."
+    },
+    {
+      "question": "Che tipo di rappresentazione semantica utilizza RDF?",
+      "options": [
+        "Alberi decisionali",
+        "Triplestore: soggetto-predicato-oggetto",
+        "Assi cartesiani",
+        "Grafi non orientati"
+      ],
+      "answer": "Triplestore: soggetto-predicato-oggetto",
+      "explanation": "RDF rappresenta conoscenza come triple: soggetto, predicato, oggetto."
+    },
+    {
+      "question": "Nel contesto dell’apprendimento automatico, cosa misura l’entropia?",
+      "options": [
+        "La precisione del modello",
+        "La complessità computazionale",
+        "Il grado di impurità di un nodo",
+        "La profondità dell’albero"
+      ],
+      "answer": "Il grado di impurità di un nodo",
+      "explanation": "L’entropia misura quanto è mescolata la classe in un set: alta entropia = alta impurità."
+    },
+    {
+      "question": "In un ontologia, la relazione 'member' rappresenta:",
+      "options": [
+        "Una relazione di equivalenza",
+        "Una relazione di istanza",
+        "Una relazione causale",
+        "Una relazione di identità"
+      ],
+      "answer": "Una relazione di istanza",
+      "explanation": "La relazione 'member' viene usata per esprimere che un individuo è istanza di una certa classe."
+    },
+    {
+      "question": "Cosa si intende per 'generate and test' nei CSP?",
+      "options": [
+        "Un metodo euristico per la valutazione delle soluzioni",
+        "Una tecnica per generare vincoli",
+        "Un approccio non sistematico alla risoluzione di problemi",
+        "Una procedura che genera soluzioni candidate e le verifica"
+      ],
+      "answer": "Una procedura che genera soluzioni candidate e le verifica",
+      "explanation": "‘Generate and test’ genera possibili soluzioni (assegnamenti) e le testa per vedere se soddisfano i vincoli."
+    },
+    {
+      "question": "Che tipo di rappresentazione è usata nel sistema esperto MYCIN?",
+      "options": [
+        "Reti semantiche",
+        "Produzioni IF-THEN",
+        "Reti neurali",
+        "Frame"
+      ],
+      "answer": "Produzioni IF-THEN",
+      "explanation": "MYCIN era un sistema esperto medico che usava regole del tipo IF-THEN per dedurre diagnosi e terapie."
+    },
+    {
+      "question": "Qual è una caratteristica fondamentale delle euristiche ammissibili?",
+      "options": [
+        "Possono sovrastimare il costo",
+        "Sono sempre esatte",
+        "Non sovrastimano mai il costo effettivo al goal",
+        "Non sono utilizzabili da A*"
+      ],
+      "answer": "Non sovrastimano mai il costo effettivo al goal",
+      "explanation": "Un'euristica ammissibile è ottimistica: non sovrastima mai il costo reale per arrivare alla soluzione."
+    },
+    {
+      "question": "Quale dei seguenti problemi è risolvibile tramite programmazione logica?",
+      "options": [
+        "Segmentazione immagini",
+        "Pianificazione automatica",
+        "Apprendimento supervisionato",
+        "Visual Question Answering"
+      ],
+      "answer": "Pianificazione automatica",
+      "explanation": "La programmazione logica, come Prolog, è utile per risolvere problemi di pianificazione basati su regole."
+    },
+    {
+      "question": "Cosa indica un nodo foglia in un albero di decisione?",
+      "options": [
+        "Una variabile non ancora testata",
+        "Un vincolo violato",
+        "Una decisione finale/classificazione",
+        "Una radice"
+      ],
+      "answer": "Una decisione finale/classificazione",
+      "explanation": "I nodi foglia in un albero decisionale rappresentano l’output finale del processo di classificazione."
+    },
+    {
+      "question": "Nel contesto di A*, un nodo già visitato con un nuovo costo migliore viene:",
+      "options": [
+        "Scartato",
+        "Sostituito e riesplorato",
+        "Memorizzato ma ignorato",
+        "Duplicato"
+      ],
+      "answer": "Sostituito e riesplorato",
+      "explanation": "Se un percorso migliore per un nodo viene trovato, A* lo aggiorna e riconsidera quel nodo nella frontiera."
+    },
+    {
+      "question": "Nel k-NN, il valore di k influisce principalmente su:",
+      "options": [
+        "La profondità dell’albero",
+        "La precisione della classificazione",
+        "La linearità del modello",
+        "La funzione obiettivo"
+      ],
+      "answer": "La precisione della classificazione",
+      "explanation": "La scelta di k bilancia bias e varianza, influenzando direttamente l’accuratezza del classificatore k-NN."
+    },
+    {
+      "question": "In un CSP, l’arc-consistency riguarda:",
+      "options": [
+        "Consistenza tra vincoli binari",
+        "Completezza dell’assegnamento",
+        "Consistenza di nodo",
+        "Consistenza globale"
+      ],
+      "answer": "Consistenza tra vincoli binari",
+      "explanation": "Un CSP è arc-consistente se per ogni valore in una variabile c’è un valore compatibile nell’altra (vincolo binario)."
+    },
+    {
+      "question": "Quale tra questi è un linguaggio orientato alla programmazione logica?",
+      "options": [
+        "LISP",
+        "Python",
+        "Prolog",
+        "Java"
+      ],
+      "answer": "Prolog",
+      "explanation": "Prolog è un linguaggio basato sulla logica del primo ordine, usato per rappresentare conoscenza e inferenza logica."
+    },
+    {
+      "question": "Nel machine learning, l’overfitting si verifica quando:",
+      "options": [
+        "Il modello non si adatta ai dati",
+        "Il modello generalizza bene su nuovi dati",
+        "Il modello si adatta troppo ai dati di training",
+        "Il modello non converge"
+      ],
+      "answer": "Il modello si adatta troppo ai dati di training",
+      "explanation": "Overfitting accade quando il modello memorizza i dati di training, perdendo capacità di generalizzare."
+    },
+    {
+      "question": "Quale tecnica si usa per evitare l’overfitting?",
+      "options": [
+        "Cross-validation",
+        "Stochastic Gradient Descent",
+        "Batch Normalization",
+        "Deep Search"
+      ],
+      "answer": "Cross-validation",
+      "explanation": "Cross-validation divide il dataset in partizioni per testare la generalizzazione del modello su dati non visti."
+    },
+    {
+      "question": "Cosa distingue una rete bayesiana?",
+      "options": [
+        "Assume sempre indipendenza tra variabili",
+        "Utilizza connessioni non pesate",
+        "Rappresenta relazioni probabilistiche tra variabili",
+        "Non supporta inferenza"
+      ],
+      "answer": "Rappresenta relazioni probabilistiche tra variabili",
+      "explanation": "Le reti bayesiane modellano relazioni probabilistiche tra variabili usando grafi aciclici diretti."
+    },
+    {
+      "question": "Quale dei seguenti approcci è tipicamente usato per il Natural Language Processing?",
+      "options": [
+        "Funzioni hash",
+        "Alberi di decisione",
+        "Modelli di Markov N-gram",
+        "Clustering gerarchico"
+      ],
+      "answer": "Modelli di Markov N-gram",
+      "explanation": "I modelli N-gram basati su Markov sono usati per stimare la probabilità di sequenze di parole nel linguaggio."
+    },
+    {
+      "question": "Qual è il compito del 'Value Iteration' nel reinforcement learning?",
+      "options": [
+        "Generare esempi positivi",
+        "Stimare la reward immediata",
+        "Calcolare il valore ottimale per ogni stato",
+        "Costruire l’albero decisionale"
+      ],
+      "answer": "Calcolare il valore ottimale per ogni stato",
+      "explanation": "Il Value Iteration calcola iterativamente il valore ottimale di ogni stato fino alla convergenza."
+    },
+    {
+      "question": "Cosa caratterizza un problema NP-completo?",
+      "options": [
+        "È risolvibile in tempo polinomiale",
+        "È risolvibile solo con euristiche",
+        "È il più difficile tra quelli in NP",
+        "Ha soluzioni infinite"
+      ],
+      "answer": "È il più difficile tra quelli in NP",
+      "explanation": "Un problema è NP-completo se è in NP e ogni altro problema in NP è riducibile a esso in tempo polinomiale."
+    },
+    {
+      "question": "Nel contesto degli agenti intelligenti, un ambiente deterministico è tale che:",
+      "options": [
+        "Non cambia mai",
+        "Ogni azione ha un effetto prevedibile",
+        "Non ci sono percezioni",
+        "Le azioni non producono effetti"
+      ],
+      "answer": "Ogni azione ha un effetto prevedibile",
+      "explanation": "In un ambiente deterministico, ogni azione dell’agente ha sempre lo stesso risultato."
+    },
+    {
+      "question": "In un sistema esperto, il 'motore inferenziale' ha il compito di:",
+      "options": [
+        "Controllare la coerenza delle regole",
+        "Applicare le regole per dedurre nuovi fatti",
+        "Memorizzare conoscenza",
+        "Gestire la UI"
+      ],
+      "answer": "Applicare le regole per dedurre nuovi fatti",
+      "explanation": "Il motore inferenziale è il componente che utilizza le regole per dedurre nuove informazioni dai fatti noti."
+    },
+    {
+      "question": "Che tipo di apprendimento sfrutta l’algoritmo Q-learning?",
+      "options": [
+        "Supervisionato",
+        "Non supervisionato",
+        "Reinforcement learning",
+        "Deep learning"
+      ],
+      "answer": "Reinforcement learning",
+      "explanation": "Q-learning è un algoritmo di reinforcement learning che apprende le politiche ottimali interagendo con l’ambiente."
+    },
+    {
+      "question": "L’ambiente di un agente può essere classificato secondo varie dimensioni, tra cui:",
+      "options": [
+        "Tempo di esecuzione e profondità",
+        "Continuità e predicibilità",
+        "Determinismo, osservabilità, staticità",
+        "Precisione e recall"
+      ],
+      "answer": "Determinismo, osservabilità, staticità",
+      "explanation": "Gli ambienti possono essere deterministici o stocastici, osservabili o parziali, statici o dinamici."
+    },
+    {
+      "question": "La tecnica del 'hill climbing' può restare bloccata in quale situazione?",
+      "options": [
+        "Plateau",
+        "Overfitting",
+        "Dataset sbilanciato",
+        "Ciclo infinito"
+      ],
+      "answer": "Plateau",
+      "explanation": "L’hill climbing può bloccarsi in un plateau, dove nessun vicino migliora la funzione obiettivo."
+    },
+    {
+      "question": "Quale dei seguenti è un metodo euristico per CSP?",
+      "options": [
+        "MRV (Minimum Remaining Values)",
+        "k-Means",
+        "Q-Learning",
+        "N-gram"
+      ],
+      "answer": "MRV (Minimum Remaining Values)",
+      "explanation": "MRV sceglie la variabile con il minor numero di valori legali, riducendo il branching del CSP."
+    },
+          {
+            "question": "Considerando un problema di ricerca di soluzione in uno spazio degli stati, che cosa differenzia un algoritmo informato da uno non informato?",
+            "options": [
+              "L’utilizzo di una funzione costo",
+              "L’utilizzo di un modello",
+              "L’utilizzo di una funzione euristica"
+            ],
+            "answer": "L’utilizzo di una funzione euristica",
+            "explanation": "Gli algoritmi informati usano una funzione euristica per stimare la distanza dalla soluzione e guidare la ricerca, a differenza di quelli non informati."
+          },
+          {
+            "question": "Quale fra i seguenti algoritmi è il più efficiente in termini di tempo per risolvere CSP?",
+            "options": [
+              "Ricerca con backtracking che sfrutta la commutatività",
+              "Back-jumping",
+              "Backward chaining",
+              "test and set"
+            ],
+            "answer": "Back-jumping",
+            "explanation": "Il back-jumping è una tecnica di ottimizzazione del backtracking che salta indietro più livelli, riducendo il tempo di ricerca."
+          },
+          {
+            "question": "Quale fra i seguenti algoritmi è il meno efficiente in termini di tempo per risolvere CSP?",
+            "options": [
+              "Ricerca con backtracking che sfrutta la commutatività",
+              "Backjumping",
+              "Generate and test"
+            ],
+            "answer": "Generate and test",
+            "explanation": "Generate and test è il meno efficiente perché genera soluzioni a caso e poi le verifica, senza guida né ottimizzazione."
+          },
+          {
+            "question": "Quale delle seguenti è la definizione di soluzione in un CSP?",
+            "options": [
+              "Una soluzione di un CSP è un assegnamento di costo minimo che porta dal nodo iniziale a un nodo target",
+              "Una soluzione di un CSP è un assegnamento di un valore variabile definita nel problema",
+              "Una soluzione di un CSP è un assegnamento completo che rispetta i vincoli"
+            ],
+            "answer": "Una soluzione di un CSP è un assegnamento completo che rispetta i vincoli",
+            "explanation": "Una soluzione in un CSP è un assegnamento completo (tutte le variabili hanno un valore) e consistente (tutti i vincoli sono soddisfatti)."
+          },
+          {
+            "question": "Cos’è la soluzione di un CSP (problema di soddisfacimento vincoli)?",
+            "options": [
+              "Un assegnamento consistente",
+              "Una sequenza di passi che permette di raggiungere il goal minimizzando il costo",
+              "Un assegnamento di tutte le variabili che soddisfa i vincoli"
+            ],
+            "answer": "Un assegnamento di tutte le variabili che soddisfa i vincoli",
+            "explanation": "La soluzione di un CSP è un assegnamento completo e consistente, ovvero soddisfa tutti i vincoli imposti dal problema."
+          },
+          {
+            "question": "Il test di Turing dice che un computer è intelligente se:",
+            "options": [
+              "Comprende le domande che gli vengono poste",
+              "Imita il comportamento umano nel rispondere alle domande",
+              "Risponde correttamente alle domande che gli vengono poste",
+              "È in grado di manifestare emozioni"
+            ],
+            "answer": "Imita il comportamento umano nel rispondere alle domande",
+            "explanation": "Secondo Turing, una macchina è intelligente se riesce a imitare il comportamento umano abbastanza da ingannare un interlocutore."
+          },
+            {
+              "question": "Considerando una matrice di confusione, quale delle seguenti distribuzioni dei valori al suo interno denota una prestazione ottimale?",
+              "options": [
+                "Diagonale principale che somma al numero delle istanze elaborate, 0 in tutte le altre celle",
+                "Distribuzione uniforme del numero di istanze elaborate su tutte le celle",
+                "Ogni cella contiene il numero di istanze della classe in questione diviso l’entropia della classe"
+              ],
+              "answer": "Diagonale principale che somma al numero delle istanze elaborate, 0 in tutte le altre celle",
+              "explanation": "Una prestazione ottimale si ottiene quando tutte le predizioni corrette si trovano sulla diagonale principale della matrice."
+            },
+            {
+              "question": "In quale parte di una matrice di confusione vorremmo veder concentrati i valori in essa contenuti?",
+              "options": [
+                "Prima colonna",
+                "Diagonale principale",
+                "Distribuzione uniforme su ciascuna riga"
+              ],
+              "answer": "Diagonale principale",
+              "explanation": "Valori sulla diagonale principale indicano che le classi sono state correttamente predette; è il segnale di alta accuratezza."
+            },
+            {
+              "question": "Quale tipo di errore non può essere calcolato tramite una matrice di confusione?",
+              "options": [
+                "Numero dei falsi positivi",
+                "Overfitting",
+                "Error rate"
+              ],
+              "answer": "Overfitting",
+              "explanation": "L’overfitting è un fenomeno legato al comportamento del modello sui dati, non è osservabile direttamente dalla matrice di confusione."
+            },
+            {
+              "question": "Quale delle seguenti misure non può essere calcolata tramite una matrice di confusione?",
+              "options": [
+                "Accuratezza",
+                "Entropia",
+                "Error rate"
+              ],
+              "answer": "Entropia",
+              "explanation": "L’entropia è una misura di impurità o incertezza nei dati, non una metrica derivabile dalla matrice di confusione."
+            },
+            {
+              "question": "Quale delle seguenti misure viene calcolata tramite una matrice di confusione?",
+              "options": [
+                "Information gain",
+                "Error rate",
+                "Accuratezza"
+              ],
+              "answer": "Accuratezza",
+              "explanation": "L'accuratezza è una misura che si ottiene direttamente dalla matrice di confusione come rapporto tra predizioni corrette e totale delle predizioni."
+            },
+            {
+              "question": "Date due euristiche ammissibili h1 e h2, quando h1 è dominante su h2?",
+              "options": [
+                "Per ogni nodo n, h1(n)≥h2(n)",
+                "Per almeno un nodo n, h1(n)≥h2(n)",
+                "Per almeno un nodo n, h1(n)≤h2(n)"
+              ],
+              "answer": "Per ogni nodo n, h1(n)≥h2(n)",
+              "explanation": "Un'euristica h1 domina h2 se per ogni nodo h1(n) ≥ h2(n) e entrambe sono ammissibili, quindi h1 è più informativa."
+            },
+            {
+              "question": "Cosa significa che un’euristica è ammissibile?",
+              "options": [
+                "Approssima h*(n) in maniera ottimale",
+                "È sempre minore di h*(n)",
+                "Fa stime conservative"
+              ],
+              "answer": "È sempre minore di h*(n)",
+              "explanation": "Un'euristica è ammissibile se non sovrastima mai il costo reale h*, ovvero è sempre minore o uguale al costo ottimale."
+            },
+            {
+              "question": "Quale delle seguenti euristiche non guida l’algoritmo di ricerca a identificare una soluzione?",
+              "options": [
+                "Distanza in linea d’aria",
+                "Funzione costante zero",
+                "Distanza di Manhattan"
+              ],
+              "answer": "Funzione costante zero",
+              "explanation": "Una funzione euristica costante pari a zero non fornisce nessuna informazione utile per guidare la ricerca."
+            },
+
+              {
+                "question": "Indicare quale delle seguenti è la definizione di unificatore di due formule espresse nella logica del prim’ordine:",
+                "options": [
+                  "Sostituzione delle variabili che rende identiche le due formule",
+                  "Associazione fra i concetti affini di due KB differenti",
+                  "Regola di inferenza che, date due clausole, restituisce il loro risolvente"
+                ],
+                "answer": "Sostituzione delle variabili che rende identiche le due formule",
+                "explanation": "L’unificatore è una sostituzione che rende due formule identiche, utile nella risoluzione logica."
+              },
+              {
+                "question": "Cosa si intende per frame problem?",
+                "options": [
+                  "Il fatto che solo alcuni concetti di un’ontologia hanno un corrispondente in un’altra affine",
+                  "L’impossibilità di sapere quali proprietà di una situazione si preservano dopo l’applicazione di un’azione",
+                  "L’imposizione di un orizzonte alla ricerca di una soluzione in uno spazio degli stati per tener conto dei vincoli di tempo"
+                ],
+                "answer": "L’impossibilità di sapere quali proprietà di una situazione si preservano dopo l’applicazione di un’azione",
+                "explanation": "Il frame problem si riferisce alla difficoltà di rappresentare logicamente le proprietà che restano invariate dopo un'azione."
+              },
+              {
+                "question": "Il frame è:",
+                "options": [
+                  "Un dominio applicativo del back-jumping",
+                  "Un errore di generalizzazione nel ragionamento per induzione",
+                  "Il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell’applicazione di un’azione"
+                ],
+                "answer": "Il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell’applicazione di un’azione",
+                "explanation": "Il frame indica proprio il problema di rappresentare ciò che rimane invariato dopo un'azione nel ragionamento automatico."
+              },
+              {
+                "question": "Per frame si intende:",
+                "options": [
+                  "Un problema che ha posto in luce i limiti dei perceptron quale test lineare",
+                  "L’incapacità di sapere quali proprietà di una situazione si preservano dopo l’applicazione di un’azione",
+                  "L’imposizione di un orizzonte alla ricerca di una soluzione in uno spazio degli stati"
+                ],
+                "answer": "L’incapacità di sapere quali proprietà di una situazione si preservano dopo l’applicazione di un’azione",
+                "explanation": "Anche in questo contesto, il frame problem riguarda l'incapacità di inferire cosa rimane invariato dopo un'azione."
+              },
+              {
+                "question": "Sulla base di cosa l’algoritmo K Nearest Neighbour restituisce la classe di appartenenza di un’istanza?",
+                "options": [
+                  "Combinazione lineare dei pesi delle varie connessioni moltiplicati per i relativi input.",
+                  "Soddisfacimento dell’antecedente di una regola indotta dal learning set",
+                  "Somiglianza dell’istanza a k istanze memorizzate, le più simili ad essa"
+                ],
+                "answer": "Somiglianza dell’istanza a k istanze memorizzate, le più simili ad essa",
+                "explanation": "K-NN assegna una classe in base alle etichette delle k istanze più vicine nel set di addestramento, secondo una metrica di distanza."
+              },
+              {
+                "question": "I valori dei nodi interni di un albero minimax con alpha-beta pruning vengono calcolati:",
+                "options": [
+                  "Risalendo verso la radice",
+                  "Quando viene creato il nodo utilizzando la funzione utilità",
+                  "Discendendo verso le foglie"
+                ],
+                "answer": "Risalendo verso la radice",
+                "explanation": "Nel minimax con pruning, i valori si calcolano risalendo dall’analisi delle foglie verso la radice, confrontando i possibili esiti."
+              },
+              {
+                "question": "Si consideri l’algoritmo minimax con alpha-beta pruning. Per quali tipi di nodi l’algoritmo calcola l’utilità?",
+                "options": [
+                  "Per i nodi foglia",
+                  "Per i nodi interni dell’albero",
+                  "Per la radice dell’albero"
+                ],
+                "answer": "Per i nodi foglia",
+                "explanation": "L’utilità viene calcolata solo per i nodi foglia, da cui poi si propaga verso l’alto nel minimax."
+              },
+                {
+                  "question": "In minimax con alpha-beta pruning l’utilità viene calcolata:",
+                  "options": [
+                    "… per la radice",
+                    "… per le foglie",
+                    "… per i nodi interni"
+                  ],
+                  "answer": "… per le foglie",
+                  "explanation": "L’algoritmo calcola l’utilità nei nodi foglia, da cui risale per decidere la mossa migliore."
+                },
+                {
+                  "question": "L’algoritmo minimax … :",
+                  "options": [
+                    "Costruisce un percorso che porta il giocatore Max a vincere",
+                    "Costruisce un percorso che porta il giocatore Min a perdere",
+                    "Sceglie la prossima mossa che il giocatore Max dovrebbe eseguire"
+                  ],
+                  "answer": "Sceglie la prossima mossa che il giocatore Max dovrebbe eseguire",
+                  "explanation": "Minimax valuta tutte le mosse possibili e suggerisce quella più vantaggiosa per il giocatore Max, assumendo un avversario perfetto."
+                },
+                {
+                  "question": "Il test di Turing dice che un computer è intelligente se:",
+                  "options": [
+                    "Imita il comportamento umano",
+                    "È in grado di manifestare emozioni",
+                    "Comprende le domande che gli vengono proposte"
+                  ],
+                  "answer": "Imita il comportamento umano",
+                  "explanation": "Il test di Turing valuta se una macchina può imitare il comportamento umano al punto da risultare indistinguibile da una persona."
+                },
+                {
+                  "question": "Sulla base di cosa l’algoritmo K Nearest Neighbour restituisce la classe di appartenenza di un’istanza?",
+                  "options": [
+                    "Combinazione lineare di pesi delle varie connessioni moltiplicanti per i relativi input",
+                    "Soddisfacimento dell’antecedente di una regola indotta dal learning set",
+                    "Somiglianza dell’istanza a k istanze memorizzate, le più simili ad essa"
+                  ],
+                  "answer": "Somiglianza dell’istanza a k istanze memorizzate, le più simili ad essa",
+                  "explanation": "KNN assegna la classe osservando le classi delle k istanze più simili nel training set, secondo una metrica di distanza."
+                },
+                {
+                  "question": "Indicare quale delle seguenti è la definizione di unificatore di due formule espresse nella logica del prim’ordine:",
+                  "options": [
+                    "Associazione fra i concetti affini di due KB differenti",
+                    "Sostituzione delle variabili che rende identiche le due formule",
+                    "Regola di inferenza che, date due clausole, restituisce il loro risolvente"
+                  ],
+                  "answer": "Sostituzione delle variabili che rende identiche le due formule",
+                  "explanation": "Un unificatore è una sostituzione di variabili che rende due formule logicamente identiche, ed è usato nei meccanismi di inferenza."
+                },
+                {
+                  "question": "Quale fra i seguenti algoritmi per risolvere CSP è il più efficiente in termini di tempo?",
+                  "options": [
+                    "Test and set",
+                    "Back-jumping",
+                    "Ricerca con backtracking che sfrutta la commutatività"
+                  ],
+                  "answer": "Back-jumping",
+                  "explanation": "Il back-jumping è più efficiente perché evita di esplorare inutilmente parti dell’albero che non portano a soluzioni valide."
+                },
+                {
+                  "question": "Nella costruzione di alberi di decisione con pre-pruning quale dei seguenti può essere un criterio per decidere che un nodo sarà una foglia?",
+                  "options": [
+                    "Il numero di istanze propagate al nodo è minore di una certa soglia",
+                    "La funzione di valutazione restituisce un valore maggiore di una certa soglia",
+                    "L’entropia restituisce 1"
+                  ],
+                  "answer": "Il numero di istanze propagate al nodo è minore di una certa soglia",
+                  "explanation": "Con il pre-pruning si può fermare la crescita dell'albero se il numero di istanze al nodo è troppo basso per garantire generalizzazione."
+                },
+                {
+                  "question": "Che cosa differenzia un problema di ricerca di una soluzione informato da uno non informato?",
+                  "options": [
+                    "La presenza di un modello",
+                    "La presenza di una funzione costo",
+                    "La presenza di una funzione euristica"
+                  ],
+                  "answer": "La presenza di una funzione euristica",
+                  "explanation": "Un problema di ricerca informato utilizza una funzione euristica per guidare la ricerca verso la soluzione in modo più efficiente."
+                },
+                {
+                  "question": "L’esperimento della camera cinese di Searle illustra come:",
+                  "options": [
+                    "La produzione della risposta giusta richieda comprensione della domanda",
+                    "Non si calcolano perché sono dati",
+                    "L’imitazione di un comportamento intelligente non implichi intelligenza"
+                  ],
+                  "answer": "L’imitazione di un comportamento intelligente non implichi intelligenza",
+                  "explanation": "La Chinese Room argument dimostra che un sistema può sembrare intelligente (output corretto) senza davvero comprendere ciò che fa."
+                },
+                {
+                  "question": "Un algoritmo di inferenza si dice completo quando:",
+                  "options": [
+                    "Kb ⊨ P allora Kb ⊢ P",
+                    "Kb ⊨ P allora Kb ⊢ P",
+                    "Kb ⊨ P allora Kb ⊨ P"
+                  ],
+                  "answer": "Kb ⊨ P allora Kb ⊢ P",
+                  "explanation": "Un algoritmo di inferenza è completo se riesce a derivare sintatticamente (⊢) tutto ciò che è semanticamente vero (⊨)."
+                },
+                  {
+                    "question": "Nella costruzione di alberi di decisione con pre-pruning quale dei seguenti può essere un criterio per decidere che un nodo sarà una foglia?",
+                    "options": [
+                      "Il numero di istanze propagate al nodo è minore di una certa soglia",
+                      "La funzione di valutazione restituisce un valore maggiore di una certa soglia",
+                      "L’entropia restituisce 1"
+                    ],
+                    "answer": "Il numero di istanze propagate al nodo è minore di una certa soglia",
+                    "explanation": "Nel pre-pruning si può arrestare la crescita di un albero se il numero di istanze al nodo è troppo basso per garantire affidabilità nella classificazione."
+                  },
+                  {
+                    "question": "Su cosa si basa il situation calculus?",
+                    "options": [
+                      "Fluente",
+                      "Azione",
+                      "Situazione"
+                    ],
+                    "answer": "Azione",
+                    "explanation": "Il situation calculus si fonda sulla rappresentazione delle azioni e dei loro effetti per modellare il cambiamento nel tempo."
+                  },
+                  {
+                    "question": "Quale dei seguenti criteri può essere usato come criterio di terminazione nella costruzione di alberi di decisione?",
+                    "options": [
+                      "Il valore della funzione di valutazione calcolata nel nodo è maggiore di una certa soglia",
+                      "Il nodo presenta overfitting",
+                      "Il numero delle istanze associate al nodo è minore di una certa soglia"
+                    ],
+                    "answer": "Il numero delle istanze associate al nodo è minore di una certa soglia",
+                    "explanation": "Un criterio comune di terminazione è la soglia minima di istanze in un nodo, oltre la quale non vale la pena continuare a dividere l’albero."
+                  },
+                  {
+                    "question": "Quale fra i seguenti algoritmi è il più efficiente in termini di spazio?",
+                    "options": [
+                      "Algoritmo di ricerca a costo minore",
+                      "Algoritmo di ricerca a costo uniforme",
+                      "Ricerca in ampiezza",
+                      "Algoritmo di ricerca in profondità"
+                    ],
+                    "answer": "Algoritmo di ricerca in profondità",
+                    "explanation": "La ricerca in profondità usa memoria proporzionale alla profondità della soluzione, rendendola molto efficiente in termini di spazio."
+                  },
+                  {
+                    "question": "Un algoritmo di ricerca di una soluzione in uno spazio è ottimo quando:",
+                    "options": [
+                      "Restituisce sempre una soluzione che minimizza il valore di h",
+                      "Restituisce sempre una soluzione nel minor numero di passi",
+                      "Restituisce sempre una soluzione a costo minimo"
+                    ],
+                    "answer": "Restituisce sempre una soluzione a costo minimo",
+                    "explanation": "Un algoritmo ottimo è quello che restituisce la soluzione con il costo totale più basso, indipendentemente dal numero di passi."
+                  },
+                  {
+                    "question": "Cosa misura l’information gain?",
+                    "options": [
+                      "Il grado di purezza di un insieme di dati",
+                      "La riduzione di overfitting comportata dal pruning",
+                      "La riduzione di entropia prodotta da uno split"
+                    ],
+                    "answer": "Il grado di purezza di un insieme di dati",
+                    "explanation": "L'information gain misura la riduzione dell'entropia, ovvero l’aumento di purezza dopo una divisione dell’insieme dei dati."
+                  },
+                  {
+                    "question": "Cosa misura l'entropia?",
+                    "options": [
+                      "Il grado di purezza di un learning set",
+                      "La stima del costo per raggiungere un nodo target",
+                      "Il grado di somiglianza di due ontologie"
+                    ],
+                    "answer": "Il grado di purezza di un learning set",
+                    "explanation": "L'entropia misura il disordine o impurità in un insieme di dati: minore è l'entropia, più puro è il set."
+                  },
+                  {
+                    "question": "Quale dei seguenti elementi non fa parte della definizione di un’azione nel situation calculus?",
+                    "options": [
+                      "Proprietà che devono valere per applicare l’azione",
+                      "Proprietà atemporali",
+                      "Proprietà che l’applicazione dell’azione modifica"
+                    ],
+                    "answer": "Proprietà che l’applicazione dell’azione modifica",
+                    "explanation": "Il situation calculus si concentra su condizioni pre e post-condizione di un'azione, non sulle proprietà che essa cambia direttamente."
+                  },
+                  {
+                    "question": "Quale dei seguenti potrebbe essere un modello nella logica proposizionale?",
+                    "options": [
+                      "X vale Giovanni, Y vale Riccardo",
+                      "X vale true , Y vale false",
+                      "X vale 4, Y vale 2"
+                    ],
+                    "answer": "X vale true , Y vale false",
+                    "explanation": "Nella logica proposizionale, un modello assegna valori di verità (true/false) ai simboli proposizionali."
+                  },
+                  {
+                    "question": "Quale dei seguenti meccanismi non serve per indurre regole di classificazione?",
+                    "options": [
+                      "K nearest neighbour",
+                      "Specific to general",
+                      "General to specific"
+                    ],
+                    "answer": "K nearest neighbour",
+                    "explanation": "KNN è un classificatore basato sulla memoria e distanza, non genera regole simboliche esplicite."
+                  },
+                    {
+                      "question": "Quali delle seguenti regole di inferenza permette di implementare la dimostrazione per refutazione?",
+                      "options": [
+                        "Eliminazione del doppio negato",
+                        "Risoluzione",
+                        "Modus ponens"
+                      ],
+                      "answer": "Risoluzione",
+                      "explanation": "La risoluzione è il metodo di inferenza principale per la prova per refutazione, usato nella logica dei predicati e proposizionale."
+                    },
+                    {
+                      "question": "In quale contesto abbiamo parlato di relazione “is-a”?",
+                      "options": [
+                        "Logica del prim’ordine",
+                        "Ontologie",
+                        "Situation calculus"
+                      ],
+                      "answer": "Ontologie",
+                      "explanation": "La relazione 'is-a' è un concetto fondamentale nelle ontologie per rappresentare gerarchie tra concetti."
+                    },
+                    {
+                      "question": "Quale dei seguenti problemi è stato rilevante nello studio del perceptron?",
+                      "options": [
+                        "Problema dell’or esclusivo",
+                        "Problema della colorazione della mappa dell’Australia",
+                        "Anomalia di Sussman"
+                      ],
+                      "answer": "Problema dell’or esclusivo",
+                      "explanation": "Il perceptron non è in grado di apprendere funzioni non linearmente separabili come l'OR esclusivo (XOR)."
+                    },
+                    {
+                      "question": "Considerando RDF (Resource Description Framework), quale delle seguenti affermazioni è vera?",
+                      "options": [
+                        "La conoscenza è costituita da triple <soggetto, predicato, oggetto>",
+                        "La conoscenza è costituita da relazioni IS-A e Member",
+                        "La conoscenza è costituita da clausole di Horn"
+                      ],
+                      "answer": "La conoscenza è costituita da triple <soggetto, predicato, oggetto>",
+                      "explanation": "RDF rappresenta la conoscenza come insiemi di triple: soggetto, predicato e oggetto."
+                    },
+                    {
+                      "question": "Il back-jumping è:",
+                      "options": [
+                        "Un algoritmo di ricerca informato",
+                        "Un algoritmo per la soluzione di problemi con vincoli",
+                        "Un’euristica ottimale"
+                      ],
+                      "answer": "Un algoritmo per la soluzione di problemi con vincoli",
+                      "explanation": "Il back-jumping è una tecnica per l’efficiente esplorazione nei CSP, che salta indietro più di un livello quando incontra un fallimento."
+                    },
+                    {
+                      "question": "In quale contesto abbiamo parlato di post-pruning?",
+                      "options": [
+                        "Problemi di soddisfacimento dei vincoli",
+                        "Apprendimento automatico",
+                        "Problemi con avversario"
+                      ],
+                      "answer": "Apprendimento automatico",
+                      "explanation": "Il post-pruning è una tecnica usata nell’apprendimento automatico per evitare overfitting negli alberi decisionali."
+                    },
+                    {
+                      "question": "Quale delle seguenti affermazioni è corretta quando si parla di tassonomia?",
+                      "options": [
+                        "L’insieme delle categorie è una partizione",
+                        "Le sottocategorie di una categoria costituiscono una partizione",
+                        "Le sottocategorie di ciascuna categoria costituiscono una partizione"
+                      ],
+                      "answer": "Le sottocategorie di ciascuna categoria costituiscono una partizione",
+                      "explanation": "In una tassonomia, ogni categoria può essere suddivisa in sottocategorie che costituiscono una partizione dell’insieme."
+                    },
+                    {
+                      "question": "Un algoritmo di inferenza si dice corretto quando:",
+                      "options": [
+                        "Kb ⊢ P allora Kb ⊨ P",
+                        "Kb ⊨ P allora Kb ⊢ P",
+                        "Kb ⊨ P allora Kb ⊨ P"
+                      ],
+                      "answer": "Kb ⊢ P allora Kb ⊨ P",
+                      "explanation": "La correttezza di un algoritmo d'inferenza significa che tutto ciò che deriva è semanticamente valido."
+                    },
+    {
+      "question": "Associa i seguenti meccanismi logici ai tipi di ragionamento che supportano",
+      "type": "matching",
+      "pairs": {
+        "model checking": "d. conseguenza logica",
+        "modus ponens generalizzato": "e. forward chaining FOL",
+        "proposizionalizzazione": "c. traduzione di una KB FOL in logica proposizionale",
+        "modus ponens": "b. forward chaining CSP",
+        "binary resolution/risoluzione": "a. ragionamento per refutazione in FOL"
+      }
+    },
+    {
+      "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
+      "type": "matching",
+      "pairs": {
+        "foward checking": "e. ricerca di una soluzione per un CSP",
+        "test-and-set": "d. nessuna di queste",
+        "general-to-specific": "a. apprendimento regole",
+        "foward chaining": "c. inferenza da una KB in clausole di Horn",
+        "ricerca bidirezionale": "b. ricerca di una soluzione in uno spazio degli stati"
+      }
+    },
+    {
+      "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
+      "type": "matching",
+      "pairs": {
+        "algoritmo di Hunt": "c. costruzione di alberi di decisione",
+        "K-NN": "d. classificazione senza un modello",
+        "back-jumping": "a. risoluzione in CSP",
+        "RBFS": "g. ricerca di una soluzione in uno spazio degli stati",
+        "specie-to-general": "f. apprendimento di regole",
+        "alpha-beta-pruning": "e. riduzione dello spazio di ricerca in un gioco con avversario",
+        "minimax": "b. suggerimento della prossima mossa in un problema con avversario"
+      }
+    },
+    {
+      "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
+      "type": "matching",
+      "pairs": {
+        "K-NN": "c. apprendimento supervisionato",
+        "back-jumping": "a. trova una soluzione per il CSP",
+        "ricerca bidirezionale": "e. trova una soluzione in uno spazio degli stati",
+        "risoluzione": "d. verifica se una formula è derivabile da una KB",
+        "backward chaining": "b. verifica se un goal è derivabile da una KB e certi fatti"
+      }
+    },
+    {
+      "question": "Effettua le combinazioni corrette tra euristiche e i loro ruoli",
+      "type": "matching",
+      "pairs": {
+        "un’euristica dominante": "d. approssima meglio h*(n)",
+        "un’euristica ammissibile": "c. è ottimistica",
+        "l’euristica minimum remaining values": "e. garantisce l'ottimalità nella ricerca su grafo",
+        "l’euristica di grado": "b. identifica una variabile coinvolta in molti vincoli",
+        "Un’euristica monotona": "a. facilita il fallimento precoce"
+      }
+    },
+    {
+      "question": "Associazione concetti nell'ontologia degli autoveicoli",
+      "type": "matching",
+      "pairs": {
+        "CT456XY is a automobile": "d. relazione errata",
+        "CT456XY member automobile": "e. relazione di istanza",
+        "member(X, automobile) => velocitàMax(50)": "b. proprietà di classe",
+        "carrozzeria part-of automobile": "a. una categoria è componente di un'altra",
+        "{mezziDaLavoro, mezziPersonali}": "c. decomposizione esaustiva rispetto a veicolo"
+      }
+    },
+    {
+      "question": "Associazione concetti nell'ontologia astronomica",
+      "type": "matching",
+      "pairs": {
+        "Mercurio member pianeta": "d. relazione di istanza",
+        "member(X, pianeta) => sferoidale": "c. proprietà di classe",
+        "astrometria isa astronomia": "a. relazione di sottoclasse",
+        "{solare, extrasolare, interstellare} rispetto a pianeta": "b. partizione",
+        "magnetosfera part-of pianeta": "e. relazione di composizione"
+      }
+    },
+    {
+      "question": "Associazione concetti nell'ontologia musicale",
+      "type": "matching",
+      "pairs": {
+        "timpano member percussione": "c. relazione di istanza",
+        "haPlettro(Y) => cordofono(Y)": "d. proprietà di classe",
+        "timpano isa percussione": "a. relazione di sottoclasse",
+        "{archi, legni, percussioni}": "b. insieme disgiunto",
+        "ottone part-of orchestra": "e. una categoria è componente di un’altra"
+      }
+    },
+    {
+      "question": "Valutazione formula logica A: not P1(x) or P2(x) or not P3(x), B: P(ID0)",
+      "type": "truefalse",
+      "statements": {
+        "La formula A) è una clausola": true,
+        "Il forward chaining è applicabile": false,
+        "La formula A) è una clausola di Horn": true,
+        "La risoluzione è applicabile": true,
+        "Il modus ponens è applicabile": false
+      }
+    },
+    {
+      "question": "Formula FOL: A) Cane(Asso), B) Custode(Proprietario(x,x)), C) Cane(x) ∧ Custode(y,x) → Responsabile(y)",
+      "type": "truefalse",
+      "statements": {
+        "Il modus ponens generalizzato non è applicabile": false,
+        "Sostituzione: x/Asso, z/z, y/Proprietario(Asso)": false,
+        "Risultato: Cane(Asso) ∧ Custode(y,Asso)": false,
+        "Risultato: Responsabile(Proprietario(Asso))": true,
+        "Sostituzione: x/Asso, z/Asso, y/Proprietario(Asso)": true
+      }
+    },
+    {
+      "question": "Regola di risoluzione con A) not Ottone(x) or Percussione(x) or not Arco(x), B) Ottone(ID0)",
+      "type": "truefalse",
+      "statements": {
+        "L’unificatore è {z/ID0}": true,
+        "La risoluzione non è applicabile": false,
+        "Risolvente: Ottone(ID0)": false,
+        "Risolvente: Percussione(ID0) or not Arco(ID0)": true,
+        "Risolvente: Percussione(x) or not Arco(x)": false
+      }
+    },
+    {
+      "question": "Tre formule: A) Alfa(ID1) or not Beta(x) or Gamma(x), B) Alfa(ID0), C) Beta(ID1)",
+      "type": "truefalse",
+      "statements": {
+        "La formula A) è una clausola di Horn": false,
+        "Il forward chaining è applicabile": false,
+        "La formula A) è una clausola": true,
+        "Si può derivare Gamma(ID1)": false,
+        "Il modus ponens generalizzato è applicabile": false
+      }
+    },
+                    {
+                      "question": "Formule con A) not Alfa(x) or Beta(x) or not Gamma(x), B) Alfa(ID0), C) Gamma(ID0)",
+                      "type": "truefalse",
+                      "statements": {
+                        "La formula A) è una clausola di Horn": true,
+                        "Il forward chaining è applicabile": true,
+                        "La formula A) è una clausola": true,
+                        "La risoluzione è applicabile": true,
+                        "Il modus ponens generalizzato è applicabile": true
+                      }
+                    }
+
+]

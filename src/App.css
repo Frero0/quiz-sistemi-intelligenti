@@ -1,0 +1,538 @@
+/* App.css - Versione Rielaborata e Ottimizzata (con fix responsività card per mobile verticale) */
+
+/* --- GENERALI E MOBILE-FIRST (Stili predefiniti per schermi piccoli) --- */
+
+html {
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  background: linear-gradient(135deg, hsl(250, 60%, 80%), hsl(290, 65%, 75%), hsl(330, 75%, 75%));
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0.75rem; /* RIDOTTO: Padding globale per non toccare i bordi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Essenziale per padding e border inclusi nella width */
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-title {
+  font-size: 1.75rem; /* Riduci la dimensione del titolo principale per mobile */
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.75rem; /* Margine ridotto per mobile */
+  text-align: center; /* Centra il titolo */
+}
+
+.dark .main-title {
+  color: hsl(250, 80%, 95%);
+}
+
+/* 2) CARD CENTRALE - STILI MOBILE-FIRST */
+.card {
+  width: 100%; /* Prende tutta la larghezza disponibile su mobile */
+  max-width: calc(100% - 1.5rem); /* AGGIORNATO: Assicura che non superi la larghezza del viewport meno il padding del body (0.75rem * 2) */
+  margin: 0.75rem auto; /* RIDOTTO: Margine per distaccarsi dai bordi dello schermo su mobile */
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-radius: 1rem; /* Angoli più piccoli per mobile */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombra meno pronunciata per mobile */
+  padding: 1.25rem; /* RIDOTTO: Padding ridotto per mobile */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Cruciale per includere padding e border nella width */
+}
+
+/* Hover effect for card (meno pronunciato su mobile) */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 3) TITOLI - STILI MOBILE-FIRST */
+h1,
+h2 {
+  font-size: 1.25rem; /* Dimensione dei titoli per mobile */
+  color: hsl(260, 50%, 30%);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center; /* Centra i titoli */
+}
+
+/* 4) PROGRESS BAR - STILI MOBILE-FIRST */
+.progress-bg {
+  background: hsl(240, 20%, 92%);
+  height: 0.4rem; /* Leggermente più sottile per mobile */
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.progress-fg {
+  background: linear-gradient(90deg, hsl(145, 55%, 50%), hsl(160, 60%, 45%));
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* 5) BOTTONI - Stile di Base Unificato (MOBILE-FIRST) */
+.btn {
+  display: block; /* I bottoni principali diventano blocco su mobile */
+  width: 100%; /* Larghezza piena per i bottoni su mobile */
+  padding: 0.75rem 1.2rem; /* Padding ridotto per mobile */
+  font-weight: 600;
+  border: none;
+  border-radius: 9999px; /* Forma a pillola */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  margin-bottom: 0.75rem; /* Spazio tra bottoni impilati */
+  font-size: 0.9rem; /* Dimensione testo ridotta per mobile */
+}
+.btn:last-child {
+  margin-bottom: 0; /* Rimuovi margine inferiore sull'ultimo bottone del gruppo */
+}
+.btn:hover {
+  transform: translateY(-2px); /* Effetto hover leggermente ridotto per mobile */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Bottoni Specifici (stile base mobile-first) */
+.btn-primary {
+  background: linear-gradient(90deg, hsl(245, 70%, 65%), hsl(290, 70%, 65%));
+  color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, hsl(0, 80%, 65%), hsl(0, 85%, 60%));
+  color: white;
+}
+
+.btn-warning {
+  background-color: hsl(45, 100%, 60%);
+  color: hsl(45, 50%, 20%);
+}
+.btn-warning:hover {
+  background-color: hsl(45, 100%, 55%);
+}
+
+.btn-secondary {
+  background-color: hsl(240, 10%, 88%);
+  color: hsl(240, 10%, 30%);
+}
+.btn-secondary:hover {
+  background-color: hsl(240, 10%, 80%);
+}
+
+/* 6) BOTTONI DI RISPOSTA - STILI MOBILE-FIRST */
+.btn-answer {
+  width: 100%;
+  text-align: left;
+  padding: 0.7rem 1rem; /* Padding ridotto per mobile */
+  margin-bottom: 0.5rem; /* Margine ridotto per mobile */
+  border-radius: 0.75rem;
+  border: 1px solid hsl(220, 20%, 88%);
+  background: white;
+  color: hsl(220, 15%, 25%);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.9rem; /* Dimensione testo ridotta per mobile */
+}
+.btn-answer:hover {
+  background: hsl(210, 50%, 95%);
+  border-color: hsl(210, 50%, 70%);
+  transform: translateY(-1px); /* Effetto hover ridotto per mobile */
+}
+.btn-answer.correct {
+  background: hsl(120, 60%, 92%);
+  border-color: hsl(120, 60%, 60%);
+  color: hsl(120, 70%, 20%);
+  font-weight: 600;
+}
+.btn-answer.wrong {
+  background: hsl(0, 70%, 94%);
+  border-color: hsl(0, 70%, 65%);
+  color: hsl(0, 80%, 30%);
+  font-weight: 600;
+}
+
+/* 7) CONTATORE PUNTEGGIO - STILI MOBILE-FIRST */
+.counter {
+  font-size: 0.8rem; /* Dimensione testo ridotta per mobile */
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap; /* Permette ai contatori di andare a capo su schermi stretti */
+  justify-content: center;
+  gap: 1rem; /* Spazio ridotto per mobile */
+  margin-bottom: 1.25rem;
+  color: hsl(240, 15%, 40%);
+}
+.counter span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* 8) SPIEGAZIONE - STILI MOBILE-FIRST */
+.explanation {
+  background: hsl(48, 100%, 96%);
+  border-left: 4px solid hsl(48, 90%, 60%);
+  padding: 0.8rem 1rem; /* Padding ridotto per mobile */
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1rem 0; /* Margine ridotto per mobile */
+  color: hsl(48, 80%, 25%);
+  font-size: 0.95rem; /* Dimensione testo leggermente ridotta per mobile */
+}
+
+/* 9) NAVIGAZIONE DOMANDE (BOTTONI ROTONDI) - STILI MOBILE-FIRST */
+.question-nav-container {
+  display: flex;
+  overflow-x: auto; /* Abilita lo scroll orizzontale se necessario */
+  padding-bottom: 0.5rem; /* Spazio per la scrollbar per non sovrapporsi */
+  margin-bottom: 0.75rem;
+  -webkit-overflow-scrolling: touch; /* Per uno scroll più fluido su iOS */
+  /* Stile della scrollbar (sottile e discreta) */
+  scrollbar-width: thin;
+  scrollbar-color: hsl(240, 10%, 80%) transparent;
+}
+.question-nav-container::-webkit-scrollbar {
+  height: 5px; /* Altezza ridotta per mobile */
+}
+.question-nav-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.question-nav-container::-webkit-scrollbar-thumb {
+  background-color: hsl(240, 10%, 80%);
+  border-radius: 10px;
+}
+.question-nav-container::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(240, 10%, 70%);
+}
+
+.question-nav {
+  display: flex; /* Contenitore interno per i bottoni */
+  gap: 0.5rem; /* Spazio ridotto tra i bottoni */
+  padding-left: 0.25rem; /* Piccolo padding per non toccare il bordo sinistro */
+  padding-right: 0.25rem; /* Piccolo padding per non toccare il bordo destro */
+}
+
+.question-pill {
+  flex-shrink: 0;
+  width: 1.5rem;      /* Dimensione per mobile */
+  height: 1.5rem;     /* Dimensione per mobile */
+  border-radius: 50%; /* Riportato a 50% per un aspetto perfettamente rotondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem; /* Dimensione testo per mobile */
+  font-weight: 600;
+  cursor: pointer;
+  transform: scale(1); /* Rimuovi la scala iniziale per mobile */
+  border: 2px solid hsl(220, 15%, 85%);
+  background-color: hsl(220, 20%, 96%);
+  color: hsl(220, 15%, 40%);
+  transition: all 0.2s ease-in-out;
+}
+.question-pill:hover {
+  transform: scale(1.05); /* Scala leggermente all'hover */
+  border-color: hsl(250, 60%, 60%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.question-pill.current {
+  background-color: hsl(250, 60%, 55%);
+  color: white;
+  border-color: hsl(250, 60%, 55%);
+  transform: scale(1.1); /* Scala leggermente per l'attuale */
+  box-shadow: 0 3px 10px rgba(88, 63, 212, 0.3);
+}
+.question-pill.answered.correct {
+  background-color: hsl(145, 60%, 45%);
+  color: white;
+  border-color: hsl(145, 60%, 45%);
+}
+.question-pill.answered.wrong {
+  background-color: hsl(0, 80%, 60%);
+  color: white;
+  border-color: hsl(0, 80%, 60%);
+}
+
+/* 10) THEME SWITCHER - STILI MOBILE-FIRST */
+.theme-switcher {
+  position: fixed; /* Posizione fissa rispetto alla finestra */
+  bottom: 1rem; /* Ridotto per mobile */
+  right: 1rem; /* Ridotto per mobile */
+  width: 2.5rem; /* Ridotto per mobile */
+  height: 2.5rem; /* Ridotto per mobile */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra ridotta per mobile */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem; /* Emoji più piccola per mobile */
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.theme-switcher:hover {
+  transform: scale(1.05) rotate(10deg); /* Effetto hover ridotto per mobile */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ────────────────────────────────────────────────────────── */
+/* DARK MODE                          */
+/* ────────────────────────────────────────────────────────── */
+
+.dark body {
+  background: linear-gradient(135deg, hsl(250, 30%, 18%), hsl(280, 25%, 15%), hsl(330, 30%, 12%));
+}
+
+.dark .card {
+  background: rgba(35, 35, 50, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: hsl(240, 20%, 90%);
+}
+
+.dark h1,
+.dark h2 {
+  color: hsl(250, 80%, 90%);
+}
+
+.dark .progress-bg {
+  background: hsl(240, 10%, 25%);
+}
+.dark .progress-fg {
+  background: linear-gradient(90deg, hsl(145, 60%, 50%), hsl(160, 65%, 45%));
+}
+
+.dark .counter {
+  color: hsl(240, 15%, 70%);
+}
+
+/* Bottoni Dark Mode */
+.dark .btn:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.dark .btn-primary {
+  background: linear-gradient(90deg, hsl(245, 60%, 60%), hsl(290, 60%, 60%));
+}
+.dark .btn-danger {
+  background: linear-gradient(135deg, hsl(0, 70%, 55%), hsl(0, 75%, 50%));
+}
+.dark .btn-warning {
+  background-color: hsl(45, 80%, 55%);
+  color: hsl(45, 50%, 15%);
+}
+.dark .btn-secondary {
+  background-color: hsl(240, 10%, 30%);
+  color: hsl(240, 10%, 90%);
+}
+.dark .btn-secondary:hover {
+  background-color: hsl(240, 10%, 40%);
+}
+
+/* Bottoni Risposta Dark Mode */
+.dark .btn-answer {
+  background-color: hsl(240, 10%, 22%);
+  border-color: hsl(240, 10%, 35%);
+  color: hsl(240, 20%, 90%);
+}
+.dark .btn-answer:hover {
+  background: hsl(240, 10%, 28%);
+  border-color: hsl(240, 10%, 50%);
+}
+.dark .btn-answer.correct {
+  background: hsl(120, 40%, 25%);
+  border-color: hsl(120, 40%, 40%);
+  color: hsl(120, 50%, 90%);
+}
+.dark .btn-answer.wrong {
+  background: hsl(0, 40%, 28%);
+  border-color: hsl(0, 40%, 45%);
+  color: hsl(0, 50%, 90%);
+}
+
+.dark .explanation {
+  background: hsl(48, 50%, 20%);
+  border-left-color: hsl(48, 80%, 55%);
+  color: hsl(48, 80%, 85%);
+}
+
+/* Navigazione Domande Dark Mode */
+.dark .question-nav-container {
+  scrollbar-color: hsl(240, 10%, 30%) transparent;
+}
+.dark .question-nav-container::-webkit-scrollbar-thumb {
+  background-color: hsl(240, 10%, 30%);
+}
+.dark .question-nav-container::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(240, 10%, 40%);
+}
+
+.dark .question-pill {
+  background-color: hsl(240, 10%, 20%);
+  border-color: hsl(240, 10%, 35%);
+  color: hsl(240, 15%, 70%);
+}
+.dark .question-pill:hover {
+  border-color: hsl(250, 70%, 70%);
+}
+.dark .question-pill.current {
+  background-color: hsl(250, 70%, 65%);
+  border-color: hsl(250, 70%, 65%);
+  color: white;
+  box-shadow: 0 5px 15px rgba(121, 98, 242, 0.3);
+}
+.dark .question-pill.answered.correct {
+  background-color: hsl(145, 60%, 40%);
+  border-color: hsl(145, 60%, 40%);
+}
+.dark .question-pill.answered.wrong {
+  background-color: hsl(0, 70%, 55%);
+  border-color: hsl(0, 70%, 55%);
+}
+
+/* ========================================================== */
+/* MEDIA QUERIES PER LA RESPONSIVITÀ (MIN-WIDTH)         */
+/* ========================================================== */
+
+/* Tablet e schermi più grandi (min-width: 576px) */
+@media (min-width: 576px) {
+  body {
+    padding: 1rem; /* AGGIORNATO: Rimuovi il padding extra che avevamo aggiunto per mobile */
+  }
+
+  .main-title {
+    font-size: 2.25rem; /* Torna alla dimensione originale */
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    max-width: 600px; /* Imposta una max-width per desktop */
+    margin: 2rem auto; /* Centra la card e aumenta il margine */
+    padding: 2rem; /* Aumenta il padding */
+    border-radius: 1.5rem; /* Angoli più dolci */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombra più pronunciata */
+  }
+
+  /* Ripristina l'hover effect completo per la card */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  h1, h2 {
+    font-size: 1.75rem; /* Aumenta i titoli */
+    margin-bottom: 1.5rem;
+    text-align: left; /* Allinea a sinistra (se desiderato) */
+  }
+
+  .progress-bg {
+    height: 0.5rem; /* Ripristina l'altezza */
+    margin-bottom: 1.5rem;
+  }
+
+  /* I bottoni principali possono tornare inline su desktop */
+  .btn {
+    display: inline-block;
+    width: auto; /* Larghezza automatica */
+    padding: 0.8rem 1.6rem;
+    margin-bottom: 0; /* Rimuovi il margine inferiore quando sono affiancati */
+    font-size: 1rem; /* Dimensione testo normale */
+  }
+  .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .btn-answer {
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem; /* Dimensione testo normale */
+  }
+
+  .counter {
+    font-size: 0.9rem;
+    gap: 1.5rem;
+  }
+
+  .explanation {
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+  }
+
+  .question-nav-container {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .question-nav {
+    gap: 0.75rem;
+    padding-left: 0; /* Rimuovi il padding extra su schermi più grandi */
+    padding-right: 0;
+  }
+
+  .question-pill {
+    width: 1.75rem; /* Torna alla dimensione desiderata */
+    height: 1.75rem;
+    font-size: 0.875rem;
+    transform: scale(0.9); /* Ripristina la scala originale all'hover */
+  }
+  .question-pill:hover {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .question-pill.current {
+    transform: scale(1.0); /* Riportato alla scala originale per il corrente */
+    box-shadow: 0 3px 8px rgba(88, 63, 212, 0.3);
+  }
+
+  .theme-switcher {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .theme-switcher:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Desktop e schermi molto grandi (min-width: 992px) */
+@media (min-width: 992px) {
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    max-width: 700px; /* La card può essere più larga su desktop */
+  }
+}
+
+/* Extra Large Desktops (min-width: 1200px) - Opzionale */
+@media (min-width: 1200px) {
+  .card {
+    max-width: 800px; /* Ancora più larga */
+  }
+}
