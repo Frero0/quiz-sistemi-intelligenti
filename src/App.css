@@ -536,3 +536,274 @@ h2 {
     max-width: 800px; /* Ancora più larga */
   }
 }
+
+.matching-question span {
+  word-break: break-word;
+  max-width: 50%;
+}
+
+.bg-green-200 { background-color: #dcfce7; }
+.border-green-500 { border: 2px solid #22c55e; }
+
+.bg-red-200 { background-color: #fee2e2; }
+.border-red-500 { border: 2px solid #ef4444; }
+
+.ring-blue-400 { box-shadow: 0 0 0 2px rgba(96, 165, 250, 1); }
+
+.matching-question > div {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+select.custom-select {
+  appearance: none;                     /* Rimuove lo stile nativo */
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #c084fc;            /* Purple border */
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;                       /* Gray-800 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+}
+
+select.custom-select:hover {
+  border-color: #a855f7;                /* Hover purple */
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.2);
+}
+
+select.custom-select:focus {
+  outline: none;
+  border-color: #9333ea;                /* Focus deeper purple */
+  box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.3);
+}
+
+
+
+
+.custom-select {
+  position: relative;
+  appearance: none;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-right: 2.5rem; /* spazio per la freccia */
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.75rem; /* rounded-xl */
+  background-color: #fff;
+  color: #1f2937; /* gray-800 */
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  animation: dropdownFadeIn 0.4s ease;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='gray' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.66a.75.75 0 01-1.08 0l-4.25-4.66a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+}
+
+.custom-select:hover {
+  border-color: #a855f7; /* purple-500 */
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.3);
+  transform: scale(1.01); /* leggero effetto fluttuante */
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #7c3aed; /* purple-600 */
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.3);
+}
+
+/* Tema scuro - stile selettori matching */
+.dark select {
+  background-color: #1f1f1f;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
+  appearance: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dark select:hover {
+  border-color: #8b5cf6; /* viola chiaro */
+}
+
+.dark select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.4);
+  border-color: #a78bfa;
+}
+
+.dark option {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.truefalse-question > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* più spazio */
+}
+
+.truefalse-question p {
+  width: 75%;
+  margin: 0;
+}
+
+.truefalse-question .flex.gap-2 {
+  width: 25%;
+  justify-content: flex-end;
+}
+
+/* Stile base dei pulsanti true/false */
+.truefalse-question button {
+  background-color: #ffffff;
+  color: #531a5e;
+  border: 0.85px solid #535151;
+  padding: 0.4rem 1.2rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Stato selezionato */
+.truefalse-question button.ring-2 {
+  background-color: #a855f7; /* viola brillante come nelle risposte multiple */
+  color: #3b16d6;
+  border-color: #a855f7;
+}
+
+/* Hover effect */
+.truefalse-question button:hover:not(:disabled) {
+  background-color: #cac5c5;
+  border-color: #c084fc;
+}
+
+.dark .truefalse-question button {
+  background-color: transparent;
+  color: #ebeaf3;
+  border-color: #777;
+}
+
+.dark .truefalse-question button.ring-2 {
+  background-color: #a855f7;
+  color: white;
+  border-color: #a855f7;
+}
+
+/* Pulsanti Vero/Falso selezionati prima della conferma */
+.truefalse-question button.bg-purple-600 {
+  background-color: #7c3aed !important; /* Viola intenso (Tailwind: purple-600) */
+  color: white !important;
+  border-color: #7c3aed !important;
+}
+
+/* Animazione al click sui pulsanti Vero/Falso selezionati */
+.truefalse-question button.bg-purple-600 {
+  background-color: #7c3aed !important;
+  color: white !important;
+  border-color: #7c3aed !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+  transform: scale(1.02);
+}
+
+.truefalse-question button.bg-purple-600:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(82, 23, 170, 0.3);
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+
+.truefalse-btn.preselected {
+  background-color: #7c3aed; /* purple-600 */
+  border-color: #7c3aed;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Dopo conferma */
+.truefalse-btn.answered-correct-selected {
+  background-color: #16a34a; /* green-600 */
+  border-color: #16a34a;
+  color: white;
+}
+.truefalse-btn.answered-incorrect-selected {
+  background-color: #dc2626; /* red-600 */
+  border-color: #dc2626;
+  color: white;
+}
+.truefalse-btn.answered-correct-notselected {
+  background-color: #bbf7d0; /* green-200 */
+  border-color: #4ade80;     /* green-400 */
+  color: #065f46;
+}
+
+/* DARK MODE */
+
+/* Selezionato prima della conferma */
+.dark .truefalse-btn.preselected {
+  background-color: #7c3aed; /* purple-600 */
+  border-color: #7c3aed;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Dopo conferma - selezionato correttamente */
+.dark .truefalse-btn.answered-correct-selected {
+  background-color: #16a34a; /* green-600 */
+  border-color: #16a34a;
+  color: white;
+}
+
+/* Dopo conferma - selezionato ma sbagliato */
+.dark .truefalse-btn.answered-incorrect-selected {
+  background-color: #dc2626; /* red-600 */
+  border-color: #dc2626;
+  color: white;
+}
+
+/* Dopo conferma - giusto ma non selezionato */
+.dark .truefalse-btn.answered-correct-notselected {
+  background-color: #065f46; /* green-900 */
+  border-color: #4ade80;
+  color: #bbf7d0;
+}
+
+.dark .truefalse-btn.answered-correct-notselected {
+  background-color: #065f46;
+  border-color: #4ade80;
+  color: #bbf7d0;
+  box-shadow: 0 0 0 2px #4ade80 inset;
+}
+
+.truefalse-btn {
+  transition: all 0.25s ease;
+}
+
+.question-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

@@ -26,6 +26,8 @@ export default function QuizApp() {
     const [questionStart, setQuestionStart] = useState(null);
     const [answeredQuestions, setAnsweredQuestions] = useState([]);
     const [shuffledOptions, setShuffledOptions] = useState([]);
+    const [matchingAnswers, setMatchingAnswers] = useState({});
+    const [trueFalseAnswers, setTrueFalseAnswers] = useState({});
 
     // Ref per far scorrere il pallino corrente in vista
     const currentPillRef = useRef(null);
@@ -68,6 +70,43 @@ export default function QuizApp() {
 
     }, [current, quizData]);
 
+    const handleTrueFalseAnswer = (statement, userValue) => {
+        setTrueFalseAnswers(prev => ({
+            ...prev,
+            [statement]: userValue
+        }));
+    };
+
+    const handleTrueFalseSubmit = () => {
+        setAnswered(true);
+        setShowExplanation(true);
+        setAnsweredQuestions(prev => [...new Set([...prev, current])]);
+        setQuestionStart(null);
+        setTimes(ts => [...ts, (Date.now() - (questionStart ?? Date.now())) / 1000]);
+
+        const correctStatements = quizData[current].statements;
+        let correctCount = 0;
+
+        for (let [statement, correctVal] of Object.entries(correctStatements)) {
+            const userAnswer = trueFalseAnswers[statement];
+            if (userAnswer === correctVal) correctCount++;
+        }
+
+        if (correctCount === Object.keys(correctStatements).length) {
+            setScore(s => s + 1);
+        } else {
+            setMistakes(m => m + 1);
+            setWrongAnswers(ws => [
+                ...ws,
+                {
+                    ...quizData[current],
+                    selected: trueFalseAnswers,
+                    questionIndex: current
+                }
+            ]);
+        }
+    };
+
     // 5) Gestione risposta
     const handleAnswer = (opt) => {
         if (answered) return;
@@ -86,12 +125,37 @@ export default function QuizApp() {
         setShowExplanation(true);
     };
 
+    const handleMatchingSubmit = () => {
+        if (answered) return;
+
+        const currentPairs = quizData[current].pairs;
+        const allCorrect = Object.entries(currentPairs).every(
+            ([left, correctRight]) => matchingAnswers[left] === correctRight
+        );
+
+        setAnswered(true);
+        setAnsweredQuestions(prev => [...new Set([...prev, current])]);
+        setTimes(ts => [...ts, (Date.now() - (questionStart ?? Date.now())) / 1000]);
+        setQuestionStart(null);
+
+        if (allCorrect) {
+            setScore(s => s + 1);
+        } else {
+            setMistakes(m => m + 1);
+            setWrongAnswers(ws => [...ws, { ...quizData[current], selected: matchingAnswers, questionIndex: current }]);
+        }
+
+        setShowExplanation(true);
+    };
+
     // 6) Ripristina stato per nuova domanda
     const resetQuestion = () => {
         setSelected(null);
         setAnswered(false);
         setShowExplanation(false);
         setTimeLeft(60);
+        setMatchingAnswers({});
+
     };
 
     // 7) Navigazione
@@ -161,19 +225,73 @@ export default function QuizApp() {
                 <h2 className="text-xl font-bold mb-4">📘 Revisione Errori</h2>
                 <ul className="space-y-4 text-left">
                     {wrongAnswers.map((item, idx) => (
-                        <li key={idx} className="explanation">
-                            <p className="font-semibold">❌ {item.question}</p>
-                            <p><strong>Tua risposta:</strong> {item.selected || 'Nessuna'}</p>
-                            <p><strong>Corretta:</strong> {item.answer}</p>
+                        <li key={idx} className="explanation border-l-4 border-yellow-400 pl-4 bg-yellow-100 p-4 rounded-md">
+                            <p className="font-semibold text-lg mb-2">❌ {item.question}</p>
+
+                            {/* TRUE/FALSE */}
+                            {item.type === 'truefalse' && (
+                                <div className="space-y-1 mt-2">
+                                    {Object.entries(item.statements || {}).map(([statement, correctAnswer], i) => {
+                                        const userAnswer = item.selected?.[statement];
+                                        const isCorrect = userAnswer === correctAnswer;
+
+                                        return (
+                                            <p key={i}>
+                                                <strong>{statement}</strong>:
+                                                <span className="ml-2">
+                <span className={isCorrect ? 'text-green-600' : 'text-red-600'}>
+                  Tua risposta: {userAnswer ? 'Vero' : 'Falso'}
+                </span>{' '}
+                                                    — Corretta: {correctAnswer ? 'Vero' : 'Falso'}
+              </span>
+                                            </p>
+                                        );
+                                    })}
+                                </div>
+                            )}
+
+                            {/* MATCHING */}
+                            {item.type === 'matching' && (
+                                <div className="space-y-1 mt-2">
+                                    {Object.entries(item.pairs || {}).map(([left, correctRight], i) => {
+                                        const userAnswer = item.selected?.[left];
+                                        const isCorrect = userAnswer === correctRight;
+
+                                        return (
+                                            <p key={i}>
+                                                <strong>{left}</strong>:
+                                                <span className="ml-2">
+                <span className={isCorrect ? 'text-green-600' : 'text-red-600'}>
+                  Tua risposta: {userAnswer || 'Nessuna'}
+                </span>{' '}
+                                                    — Corretta: {correctRight}
+              </span>
+                                            </p>
+                                        );
+                                    })}
+                                </div>
+                            )}
+
+                            {/* MULTIPLA o fallback */}
+                            {(!item.type || item.type === 'multiple') && (
+                                <>
+                                    <p><strong>Tua risposta:</strong> {item.selected || 'Nessuna'}</p>
+                                    <p><strong>Corretta:</strong> <span className="text-green-600">{item.answer}</span></p>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>
-                <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6"> {/* Aggiunta classi per responsività */}
-                    <button onClick={restartQuiz} className="btn btn-primary">
+
+                <div className="flex flex-col sm:flex-row justify-end gap-4 mt-6">
+                    <button
+                        onClick={() => {
+                            restartQuiz(); // esegue la tua logica interna
+                            window.location.reload(); // forza un vero reset di tutto
+                        }}
+                        className="btn btn-primary"
+                    >
                         🔄 Ricomincia
-                    </button>
-                    <button onClick={() => { setReviewMode(false); finishTest(); }} className="btn btn-secondary">
-                        ← Torna al riepilogo
                     </button>
                 </div>
             </ScreenWrapper>
@@ -259,7 +377,8 @@ export default function QuizApp() {
             <h2 className="text-center text-lg font-medium mb-6">{item.question}</h2>
 
             <div className="space-y-3 mb-6">
-                {shuffledOptions.map(opt => {
+                {/* DOMANDE A SCELTA MULTIPLA */}
+                {item.type !== 'matching' && item.type !== 'truefalse' && shuffledOptions.map(opt => {
                     const isCorrect = opt === item.answer;
                     const isSelectedWrong = selected === opt && !isCorrect;
 
@@ -268,16 +387,120 @@ export default function QuizApp() {
                             key={opt}
                             onClick={() => handleAnswer(opt)}
                             disabled={answered}
-                            className={`btn-answer ${
-                                answered && isCorrect ? 'correct' : ''
-                            } ${
-                                answered && isSelectedWrong ? 'wrong' : ''
-                            }`}
+                            className={`btn-answer ${answered && isCorrect ? 'correct' : ''} ${answered && isSelectedWrong ? 'wrong' : ''}`}
                         >
                             {opt}
                         </button>
                     );
                 })}
+
+                {/* DOMANDE MATCHING */}
+                {item.type === 'matching' && (
+                    <div className="matching-question space-y-4">
+                        {Object.entries(item.pairs).map(([left, correctRight], idx) => (
+                            <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white/20 p-3 rounded-xl">
+                                <span className="font-medium w-full sm:w-1/2">{left}</span>
+                                {answered ? (
+                                    <div className="w-full sm:w-1/2 space-y-1">
+                                        <div
+                                            className={`text-sm font-bold ${
+                                                matchingAnswers[left] === correctRight ? 'text-green-600' : 'text-red-600'
+                                            }`}
+                                        >
+      <span className="block">
+        <strong>Tua risposta:</strong> {matchingAnswers[left] || 'Nessuna risposta'}
+      </span>
+                                        </div>
+                                        {matchingAnswers[left] !== correctRight && (
+                                            <div className="text-sm text-gray-700">
+                                                <strong>Corretta:</strong> {correctRight}
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <select
+                                        value={matchingAnswers[left] || ''}
+                                        onChange={(e) => setMatchingAnswers(ans => ({ ...ans, [left]: e.target.value }))}
+                                        className="custom-select"
+                                    >
+                                        <option value="" disabled>Seleziona</option>
+                                        {Object.values(item.pairs).map((opt, i) => (
+                                            <option key={i} value={opt}>{opt}</option>
+                                        ))}
+                                    </select>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {/* DOMANDE TRUE/FALSE */}
+                {item.type === 'truefalse' && (
+                    <div className="truefalse-question space-y-2">
+                        {Object.entries(item.statements).map(([statement, correctValue], idx) => (
+                            <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white/20 p-4 rounded-xl">
+                                {/* La frase */}
+                                <p className="font-medium w-full sm:w-2/3">{statement}</p>
+
+                                {/* I pulsanti Vero / Falso */}
+                                <div className="flex gap-2 w-full sm:w-1/3 justify-end">
+                                    {['Vero', 'Falso'].map((label) => {
+                                        const expectedValue = label === 'Vero';
+                                        const userAnswer = trueFalseAnswers[statement];
+                                        const selected = userAnswer === expectedValue;
+                                        const correct = correctValue === expectedValue;
+
+                                        let className = 'truefalse-btn'; // base class per tutti
+
+                                        if (answered) {
+                                            if (selected && correct) className += ' answered-correct-selected';
+                                            else if (selected && !correct) className += ' answered-incorrect-selected';
+                                            else if (!selected && correct) className += ' answered-correct-notselected';
+                                            else className += ' answered-unselected';
+                                        } else {
+                                            className += selected ? ' preselected' : ' unselected';
+                                        }
+
+                                        return (
+                                            <button
+                                                key={label}
+                                                onClick={() => handleTrueFalseAnswer(statement, expectedValue)}
+                                                className={className}
+                                                disabled={answered}
+                                            >
+                                                {label}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+
+                                {/* Feedback risposta */}
+                                {answered && (
+                                    <div className="w-full sm:w-full text-sm mt-2 sm:mt-0 text-right">
+                                        <strong>Risposta data:</strong>{' '}
+                                        {trueFalseAnswers[statement] === undefined
+                                            ? 'Nessuna'
+                                            : trueFalseAnswers[statement]
+                                                ? 'Vero'
+                                                : 'Falso'}
+                                        <br />
+                                        <span
+                                            className={
+                                                correctValue === trueFalseAnswers[statement]
+                                                    ? 'text-green-400 font-semibold'
+                                                    : 'text-red-400 font-semibold'
+                                            }
+                                        >
+          {correctValue === trueFalseAnswers[statement]
+              ? '✓ Corretta'
+              : '✗ Errata'}
+        </span>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
 
             {showExplanation && (
@@ -290,17 +513,42 @@ export default function QuizApp() {
                 </motion.div>
             )}
 
-            <div className="flex flex-col sm:flex-row justify-between items-center mt-6"> {/* Aggiunta classi per responsività */}
+            <div className="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
+
+                {/* Bottone Conferma per True/False */}
+                {!answered && item.type === 'truefalse' &&
+                    Object.keys(trueFalseAnswers).length === Object.keys(item.statements).length && (
+                        <button
+                            onClick={handleTrueFalseSubmit}
+                            className="btn btn-primary"
+                        >
+                            ✅ Conferma Risposte
+                        </button>
+                    )}
+
+                {/* Bottone Conferma per Matching */}
+                {!answered && item.type === 'matching' && (
+                    <button
+                        onClick={handleMatchingSubmit}
+                        className="btn btn-primary"
+                    >
+                        ✅ Conferma Risposte
+                    </button>
+                )}
+
+                {/* Bottone Termina */}
                 <button onClick={finishTest} className="btn btn-danger">
-                    🛑 Termina
+                    🔴 Termina
                 </button>
+
+                {/* Bottone Prossima/Vai ai Risultati */}
                 {showExplanation && current < quizData.length - 1 && (
-                    <button onClick={next} className="btn btn-primary mt-4 sm:mt-0"> {/* Aggiunta classe per margine su mobile */}
+                    <button onClick={next} className="btn btn-primary">
                         Prossima ➡️
                     </button>
                 )}
                 {showExplanation && current === quizData.length - 1 && (
-                    <button onClick={finishTest} className="btn btn-primary mt-4 sm:mt-0"> {/* Aggiunta classe per margine su mobile */}
+                    <button onClick={finishTest} className="btn btn-primary">
                         Vai ai Risultati
                     </button>
                 )}

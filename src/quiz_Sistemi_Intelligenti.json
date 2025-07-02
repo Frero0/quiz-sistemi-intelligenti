@@ -10,16 +10,6 @@
     "explanation": "Una soluzione di un CSP è un assegnamento completo che soddisfa tutti i vincoli imposti sul problema."
   },
   {
-    "question": "Un algoritmo di ricerca di una soluzione in uno spazio degli stati è ottimo quando:",
-    "options": [
-      "restituisce sempre una soluzione di costo minimo",
-      "restituisce sempre una soluzione nel minor numero di passi",
-      "restituisce sempre una soluzione che minimizza il valore di h"
-    ],
-    "answer": "restituisce sempre una soluzione di costo minimo",
-    "explanation": "L’ottimalità si riferisce alla capacità di trovare la soluzione con il costo minimo tra tutte le soluzioni."
-  },
-  {
     "question": "Associa le seguenti regole di inferenza ai tipi di ragionamento che supportano:",
     "options": [
       "modus ponens → forward chaining; risoluzione → ragionamento per refutazione; modus ponens generalizzato → backward chaining FOL",
@@ -38,16 +28,6 @@
     ],
     "answer": "apprendimento automatico",
     "explanation": "Il post-pruning è una tecnica utilizzata in apprendimento automatico per semplificare gli alberi di decisione dopo l’addestramento."
-  },
-  {
-    "question": "Il frame problem è:",
-    "options": [
-      "un dominio applicativo del back-jumping",
-      "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
-      "un errore di generalizzazione nel ragionamento per induzione"
-    ],
-    "answer": "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
-    "explanation": "Il frame problem riguarda la difficoltà nel rappresentare ciò che non cambia dopo un’azione in un sistema logico."
   },
     {
       "question": "Da quale dei seguenti insiemi di formule, applicando la regola di risoluzione più volte, ottengo come risultato la formula (not B or C)?",
@@ -144,80 +124,25 @@
       "answer": "Che sia ammissibile, ovvero non sovrastimi mai il costo reale",
       "explanation": "Una funzione euristica è ammissibile se non sovrastima mai il costo reale per raggiungere il goal. È essenziale per garantire l'ottimalità dell’A*."
     },
-    {
-      "question": "Il frame problem è:",
-      "options": [
-        "un dominio applicativo del back-jumping",
-        "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
-        "un errore di generalizzazione nel ragionamento per induzione"
-      ],
-      "answer": "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione"
-    },
-    {
-      "question": "In quale contesto abbiamo parlato di relazione 'is-a'?",
-      "options": [
-        "logica del prim'ordine",
-        "ontologie",
-        "situation calculus"
-      ],
-      "answer": "ontologie"
-    },
-    {
-      "question": "Un algoritmo di ricerca di una soluzione in uno spazio degli stati è ottimo quando:",
-      "options": [
-        "restituisce sempre una soluzione che minimizza il valore di h",
-        "restituisce sempre una soluzione nel minor numero di passi",
-        "restituisce sempre una soluzione di costo minimo"
-      ],
-      "answer": "restituisce sempre una soluzione di costo minimo"
-    },
-    {
-      "question": "In un problema di pianificazione, cosa rappresentano i fluenti?",
-      "options": [
-        "Le regole di inferenza logica",
-        "Le variabili che descrivono lo stato del mondo nel tempo",
-        "Le azioni che modificano lo stato del mondo"
-      ],
-      "answer": "Le variabili che descrivono lo stato del mondo nel tempo"
-    },
-    {
-      "question": "Il Situation Calculus è un formalismo per rappresentare:",
-      "options": [
-        "Le euristiche nei problemi di ricerca",
-        "Le relazioni tra insiemi in una base di conoscenza",
-        "L'evoluzione dello stato del mondo a seguito delle azioni"
-      ],
-      "answer": "L'evoluzione dello stato del mondo a seguito delle azioni"
-    },
   {
-    "question": "Il frame problem è:",
+    "question": "In un problema di pianificazione, cosa rappresentano i fluenti?",
     "options": [
-      "un dominio applicativo del back-jumping",
-      "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
-      "un errore di generalizzazione nel ragionamento per induzione"
+      "Le regole di inferenza logica",
+      "Le variabili che descrivono lo stato del mondo nel tempo",
+      "Le azioni che modificano lo stato del mondo"
     ],
-    "answer": "il problema di non riuscire a inferire i fluenti che non cambiano a seguito dell'applicazione di un’azione",
-    "explanation": "Il frame problem si riferisce alla difficoltà di rappresentare ciò che non cambia dopo un'azione in un sistema logico."
+    "answer": "Le variabili che descrivono lo stato del mondo nel tempo",
+    "explanation": "I fluenti sono funzioni o predicati che descrivono lo stato del mondo e che possono cambiare nel tempo in seguito all'esecuzione di azioni."
   },
   {
-    "question": "In quale contesto abbiamo parlato di relazione 'is-a'?",
+    "question": "Il Situation Calculus è un formalismo per rappresentare:",
     "options": [
-      "logica del prim’ordine",
-      "ontologie",
-      "situation calculus"
+      "Le euristiche nei problemi di ricerca",
+      "Le relazioni tra insiemi in una base di conoscenza",
+      "L'evoluzione dello stato del mondo a seguito delle azioni"
     ],
-    "answer": "ontologie",
-    "explanation": "La relazione 'is-a' è tipica delle ontologie, dove si modellano gerarchie concettuali."
-  },
-  {
-    "question": "Un algoritmo di ricerca di una soluzione in uno spazio degli stati è ottimo quando:",
-    "options": [
-      "restituisce sempre una soluzione che minimizza il valore di h",
-      "restituisce sempre una soluzione nel minor numero di passi",
-      "restituisce sempre una soluzione di costo minimo"
-    ],
-    "answer": "restituisce sempre una soluzione di costo minimo",
-    "explanation": "Un algoritmo è ottimo se garantisce il costo minimo tra tutte le soluzioni."
+    "answer": "L'evoluzione dello stato del mondo a seguito delle azioni",
+    "explanation": "Il Situation Calculus è un formalismo logico usato per rappresentare dinamicamente come cambia lo stato del mondo nel tempo a causa delle azioni."
   },
   {
     "question": "In quale contesto abbiamo parlato di post-pruning?",
@@ -1777,16 +1702,6 @@
                       "explanation": "La risoluzione è il metodo di inferenza principale per la prova per refutazione, usato nella logica dei predicati e proposizionale."
                     },
                     {
-                      "question": "In quale contesto abbiamo parlato di relazione “is-a”?",
-                      "options": [
-                        "Logica del prim’ordine",
-                        "Ontologie",
-                        "Situation calculus"
-                      ],
-                      "answer": "Ontologie",
-                      "explanation": "La relazione 'is-a' è un concetto fondamentale nelle ontologie per rappresentare gerarchie tra concetti."
-                    },
-                    {
                       "question": "Quale dei seguenti problemi è stato rilevante nello studio del perceptron?",
                       "options": [
                         "Problema dell’or esclusivo",
@@ -1846,150 +1761,163 @@
                       "answer": "Kb ⊢ P allora Kb ⊨ P",
                       "explanation": "La correttezza di un algoritmo d'inferenza significa che tutto ciò che deriva è semanticamente valido."
                     },
-    {
-      "question": "Associa i seguenti meccanismi logici ai tipi di ragionamento che supportano",
-      "type": "matching",
-      "pairs": {
-        "model checking": "d. conseguenza logica",
-        "modus ponens generalizzato": "e. forward chaining FOL",
-        "proposizionalizzazione": "c. traduzione di una KB FOL in logica proposizionale",
-        "modus ponens": "b. forward chaining CSP",
-        "binary resolution/risoluzione": "a. ragionamento per refutazione in FOL"
-      }
+  {
+    "question": "Associa i seguenti meccanismi logici ai tipi di ragionamento che supportano",
+    "type": "matching",
+    "pairs": {
+      "model checking": "d. conseguenza logica",
+      "modus ponens generalizzato": "e. forward chaining FOL",
+      "proposizionalizzazione": "c. traduzione di una KB FOL in logica proposizionale",
+      "modus ponens": "b. forward chaining CSP",
+      "binary resolution/risoluzione": "a. ragionamento per refutazione in FOL"
     },
-    {
-      "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
-      "type": "matching",
-      "pairs": {
-        "foward checking": "e. ricerca di una soluzione per un CSP",
-        "test-and-set": "d. nessuna di queste",
-        "general-to-specific": "a. apprendimento regole",
-        "foward chaining": "c. inferenza da una KB in clausole di Horn",
-        "ricerca bidirezionale": "b. ricerca di una soluzione in uno spazio degli stati"
-      }
+    "explanation": "Ogni meccanismo supporta un diverso tipo di inferenza: la risoluzione opera per refutazione, il model checking verifica la conseguenza logica, mentre i due modus ponens differiscono per il tipo di logica (proposizionale o FOL)."
+  },
+  {
+    "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
+    "type": "matching",
+    "pairs": {
+      "foward checking": "e. ricerca di una soluzione per un CSP",
+      "test-and-set": "d. nessuna di queste",
+      "general-to-specific": "a. apprendimento regole",
+      "foward chaining": "c. inferenza da una KB in clausole di Horn",
+      "ricerca bidirezionale": "b. ricerca di una soluzione in uno spazio degli stati"
     },
-    {
-      "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
-      "type": "matching",
-      "pairs": {
-        "algoritmo di Hunt": "c. costruzione di alberi di decisione",
-        "K-NN": "d. classificazione senza un modello",
-        "back-jumping": "a. risoluzione in CSP",
-        "RBFS": "g. ricerca di una soluzione in uno spazio degli stati",
-        "specie-to-general": "f. apprendimento di regole",
-        "alpha-beta-pruning": "e. riduzione dello spazio di ricerca in un gioco con avversario",
-        "minimax": "b. suggerimento della prossima mossa in un problema con avversario"
-      }
+    "explanation": "Ogni algoritmo è pensato per un contesto specifico: forward checking per CSP, chaining per inferenza logica, general-to-specific per apprendere regole. Test-and-set è legato alla concorrenza, non all'intelligenza artificiale."
+  },
+  {
+    "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
+    "type": "matching",
+    "pairs": {
+      "algoritmo di Hunt": "c. costruzione di alberi di decisione",
+      "K-NN": "d. classificazione senza un modello",
+      "back-jumping": "a. risoluzione in CSP",
+      "RBFS": "g. ricerca di una soluzione in uno spazio degli stati",
+      "specie-to-general": "f. apprendimento di regole",
+      "alpha-beta-pruning": "e. riduzione dello spazio di ricerca in un gioco con avversario",
+      "minimax": "b. suggerimento della prossima mossa in un problema con avversario"
     },
-    {
-      "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
-      "type": "matching",
-      "pairs": {
-        "K-NN": "c. apprendimento supervisionato",
-        "back-jumping": "a. trova una soluzione per il CSP",
-        "ricerca bidirezionale": "e. trova una soluzione in uno spazio degli stati",
-        "risoluzione": "d. verifica se una formula è derivabile da una KB",
-        "backward chaining": "b. verifica se un goal è derivabile da una KB e certi fatti"
-      }
+    "explanation": "Questi algoritmi coprono vari ambiti: CSP, apprendimento supervisionato, giochi, e ricerca. Ad esempio, minimax e alpha-beta sono per giochi a due giocatori, mentre K-NN è un classificatore lazy."
+  },
+  {
+    "question": "Associa correttamente gli algoritmi elencati ai compiti che svolgono",
+    "type": "matching",
+    "pairs": {
+      "K-NN": "c. apprendimento supervisionato",
+      "back-jumping": "a. trova una soluzione per il CSP",
+      "ricerca bidirezionale": "e. trova una soluzione in uno spazio degli stati",
+      "risoluzione": "d. verifica se una formula è derivabile da una KB",
+      "backward chaining": "b. verifica se un goal è derivabile da una KB e certi fatti"
     },
-    {
-      "question": "Effettua le combinazioni corrette tra euristiche e i loro ruoli",
-      "type": "matching",
-      "pairs": {
-        "un’euristica dominante": "d. approssima meglio h*(n)",
-        "un’euristica ammissibile": "c. è ottimistica",
-        "l’euristica minimum remaining values": "e. garantisce l'ottimalità nella ricerca su grafo",
-        "l’euristica di grado": "b. identifica una variabile coinvolta in molti vincoli",
-        "Un’euristica monotona": "a. facilita il fallimento precoce"
-      }
+    "explanation": "Gli algoritmi si distinguono per tipo di problema: risoluzione e chaining per inferenza logica, K-NN per classificazione supervisionata, back-jumping e ricerca per CSP e spazi degli stati."
+  },
+  {
+    "question": "Effettua le combinazioni corrette tra euristiche e i loro ruoli",
+    "type": "matching",
+    "pairs": {
+      "un’euristica dominante": "d. approssima meglio h*(n)",
+      "un’euristica ammissibile": "c. è ottimistica",
+      "l’euristica minimum remaining values": "e. garantisce l'ottimalità nella ricerca su grafo",
+      "l’euristica di grado": "b. identifica una variabile coinvolta in molti vincoli",
+      "Un’euristica monotona": "a. facilita il fallimento precoce"
     },
-    {
-      "question": "Associazione concetti nell'ontologia degli autoveicoli",
-      "type": "matching",
-      "pairs": {
-        "CT456XY is a automobile": "d. relazione errata",
-        "CT456XY member automobile": "e. relazione di istanza",
-        "member(X, automobile) => velocitàMax(50)": "b. proprietà di classe",
-        "carrozzeria part-of automobile": "a. una categoria è componente di un'altra",
-        "{mezziDaLavoro, mezziPersonali}": "c. decomposizione esaustiva rispetto a veicolo"
-      }
+    "explanation": "Le euristiche guidano la ricerca: le ammissibili non sovrastimano, quelle dominanti sono migliori, mentre le CSP euristiche aiutano nella selezione delle variabili."
+  },
+  {
+    "question": "Associazione concetti nell'ontologia degli autoveicoli",
+    "type": "matching",
+    "pairs": {
+      "CT456XY is a automobile": "d. relazione errata",
+      "CT456XY member automobile": "e. relazione di istanza",
+      "member(X, automobile) => velocitàMax(50)": "b. proprietà di classe",
+      "carrozzeria part-of automobile": "a. una categoria è componente di un'altra",
+      "{mezziDaLavoro, mezziPersonali}": "c. decomposizione esaustiva rispetto a veicolo"
     },
-    {
-      "question": "Associazione concetti nell'ontologia astronomica",
-      "type": "matching",
-      "pairs": {
-        "Mercurio member pianeta": "d. relazione di istanza",
-        "member(X, pianeta) => sferoidale": "c. proprietà di classe",
-        "astrometria isa astronomia": "a. relazione di sottoclasse",
-        "{solare, extrasolare, interstellare} rispetto a pianeta": "b. partizione",
-        "magnetosfera part-of pianeta": "e. relazione di composizione"
-      }
+    "explanation": "L’ontologia distingue tra istanza, composizione e proprietà: 'member' indica appartenenza, 'part-of' una componente, le partizioni rappresentano suddivisioni esaustive."
+  },
+  {
+    "question": "Associazione concetti nell'ontologia astronomica",
+    "type": "matching",
+    "pairs": {
+      "Mercurio member pianeta": "d. relazione di istanza",
+      "member(X, pianeta) => sferoidale": "c. proprietà di classe",
+      "astrometria isa astronomia": "a. relazione di sottoclasse",
+      "{solare, extrasolare, interstellare} rispetto a pianeta": "b. partizione",
+      "magnetosfera part-of pianeta": "e. relazione di composizione"
     },
-    {
-      "question": "Associazione concetti nell'ontologia musicale",
-      "type": "matching",
-      "pairs": {
-        "timpano member percussione": "c. relazione di istanza",
-        "haPlettro(Y) => cordofono(Y)": "d. proprietà di classe",
-        "timpano isa percussione": "a. relazione di sottoclasse",
-        "{archi, legni, percussioni}": "b. insieme disgiunto",
-        "ottone part-of orchestra": "e. una categoria è componente di un’altra"
-      }
+    "explanation": "L'ontologia rappresenta relazioni tra entità: 'isa' per sottoclassi, 'member' per istanze, 'part-of' per composizione fisica, e le partizioni per categorizzazioni esclusive."
+  },
+  {
+    "question": "Associazione concetti nell'ontologia musicale",
+    "type": "matching",
+    "pairs": {
+      "timpano member percussione": "c. relazione di istanza",
+      "haPlettro(Y) => cordofono(Y)": "d. proprietà di classe",
+      "timpano isa percussione": "a. relazione di sottoclasse",
+      "{archi, legni, percussioni}": "b. insieme disgiunto",
+      "ottone part-of orchestra": "e. una categoria è componente di un’altra"
     },
-    {
-      "question": "Valutazione formula logica A: not P1(x) or P2(x) or not P3(x), B: P(ID0)",
-      "type": "truefalse",
-      "statements": {
-        "La formula A) è una clausola": true,
-        "Il forward chaining è applicabile": false,
-        "La formula A) è una clausola di Horn": true,
-        "La risoluzione è applicabile": true,
-        "Il modus ponens è applicabile": false
-      }
+    "explanation": "La tassonomia musicale include istanze (member), sottoclassi (isa), proprietà (implicazioni), disgiunzioni e relazioni di composizione tra strumenti e gruppi."
+  },
+  {
+    "question": "Valutazione formula logica A: not P1(x) or P2(x) or not P3(x), B: P(ID0)",
+    "type": "truefalse",
+    "statements": {
+      "La formula A) è una clausola": true,
+      "Il forward chaining è applicabile": false,
+      "La formula A) è una clausola di Horn": true,
+      "La risoluzione è applicabile": true,
+      "Il modus ponens è applicabile": false
     },
-    {
-      "question": "Formula FOL: A) Cane(Asso), B) Custode(Proprietario(x,x)), C) Cane(x) ∧ Custode(y,x) → Responsabile(y)",
-      "type": "truefalse",
-      "statements": {
-        "Il modus ponens generalizzato non è applicabile": false,
-        "Sostituzione: x/Asso, z/z, y/Proprietario(Asso)": false,
-        "Risultato: Cane(Asso) ∧ Custode(y,Asso)": false,
-        "Risultato: Responsabile(Proprietario(Asso))": true,
-        "Sostituzione: x/Asso, z/Asso, y/Proprietario(Asso)": true
-      }
+    "explanation": "Una clausola di Horn ha al massimo un letterale positivo, quindi A lo è. La risoluzione si applica, ma non il modus ponens se la forma non è implicativa."
+  },
+  {
+    "question": "Formula FOL: A) Cane(Asso), B) Custode(Proprietario(x,x)), C) Cane(x) ∧ Custode(y,x) → Responsabile(y)",
+    "type": "truefalse",
+    "statements": {
+      "Il modus ponens generalizzato non è applicabile": false,
+      "Sostituzione: x/Asso, z/z, y/Proprietario(Asso)": false,
+      "Risultato: Cane(Asso) ∧ Custode(y,Asso)": false,
+      "Risultato: Responsabile(Proprietario(Asso))": true,
+      "Sostituzione: x/Asso, z/Asso, y/Proprietario(Asso)": true
     },
-    {
-      "question": "Regola di risoluzione con A) not Ottone(x) or Percussione(x) or not Arco(x), B) Ottone(ID0)",
-      "type": "truefalse",
-      "statements": {
-        "L’unificatore è {z/ID0}": true,
-        "La risoluzione non è applicabile": false,
-        "Risolvente: Ottone(ID0)": false,
-        "Risolvente: Percussione(ID0) or not Arco(ID0)": true,
-        "Risolvente: Percussione(x) or not Arco(x)": false
-      }
+    "explanation": "Il modus ponens generalizzato può essere applicato dopo unificazione tra la premessa e i fatti; le sostituzioni corrette permettono di dedurre Responsabile(Proprietario(Asso))."
+  },
+  {
+    "question": "Regola di risoluzione con A) not Ottone(x) or Percussione(x) or not Arco(x), B) Ottone(ID0)",
+    "type": "truefalse",
+    "statements": {
+      "L’unificatore è {z/ID0}": true,
+      "La risoluzione non è applicabile": false,
+      "Risolvente: Ottone(ID0)": false,
+      "Risolvente: Percussione(ID0) or not Arco(ID0)": true,
+      "Risolvente: Percussione(x) or not Arco(x)": false
     },
-    {
-      "question": "Tre formule: A) Alfa(ID1) or not Beta(x) or Gamma(x), B) Alfa(ID0), C) Beta(ID1)",
-      "type": "truefalse",
-      "statements": {
-        "La formula A) è una clausola di Horn": false,
-        "Il forward chaining è applicabile": false,
-        "La formula A) è una clausola": true,
-        "Si può derivare Gamma(ID1)": false,
-        "Il modus ponens generalizzato è applicabile": false
-      }
+    "explanation": "Applicando la risoluzione tra la clausola A e il fatto Ottone(ID0), si elimina 'not Ottone(x)' e si ottiene una nuova clausola con le restanti disgiunzioni istanziate."
+  },
+  {
+    "question": "Tre formule: A) Alfa(ID1) or not Beta(x) or Gamma(x), B) Alfa(ID0), C) Beta(ID1)",
+    "type": "truefalse",
+    "statements": {
+      "La formula A) è una clausola di Horn": false,
+      "Il forward chaining è applicabile": false,
+      "La formula A) è una clausola": true,
+      "Si può derivare Gamma(ID1)": false,
+      "Il modus ponens generalizzato è applicabile": false
     },
-                    {
-                      "question": "Formule con A) not Alfa(x) or Beta(x) or not Gamma(x), B) Alfa(ID0), C) Gamma(ID0)",
-                      "type": "truefalse",
-                      "statements": {
-                        "La formula A) è una clausola di Horn": true,
-                        "Il forward chaining è applicabile": true,
-                        "La formula A) è una clausola": true,
-                        "La risoluzione è applicabile": true,
-                        "Il modus ponens generalizzato è applicabile": true
-                      }
-                    }
+    "explanation": "A non è una clausola di Horn perché contiene più di un letterale positivo. Inoltre, le premesse non permettono di applicare forward chaining né modus ponens generalizzato."
+  },
+  {
+    "question": "Formule con A) not Alfa(x) or Beta(x) or not Gamma(x), B) Alfa(ID0), C) Gamma(ID0)",
+    "type": "truefalse",
+    "statements": {
+      "La formula A) è una clausola di Horn": true,
+      "Il forward chaining è applicabile": true,
+      "La formula A) è una clausola": true,
+      "La risoluzione è applicabile": true,
+      "Il modus ponens generalizzato è applicabile": true
+    },
+    "explanation": "In questo caso, la clausola A è una clausola di Horn e le formule B e C possono essere usate per applicare forward chaining, risoluzione e modus ponens generalizzato."
+  }
 
 ]
