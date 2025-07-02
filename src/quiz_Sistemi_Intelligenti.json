@@ -1,15 +1,5 @@
 [
   {
-    "question": "Cos’è una soluzione di un CSP (problema di soddisfacimento di vincoli)?",
-    "options": [
-      "un assegnamento consistente",
-      "una sequenza di passi che permette di raggiungere il goal minimizzando il costo",
-      "un assegnamento di tutte le sue variabili che soddisfa i vincoli"
-    ],
-    "answer": "un assegnamento di tutte le sue variabili che soddisfa i vincoli",
-    "explanation": "Una soluzione di un CSP è un assegnamento completo che soddisfa tutti i vincoli imposti sul problema."
-  },
-  {
     "question": "Associa le seguenti regole di inferenza ai tipi di ragionamento che supportano:",
     "options": [
       "modus ponens → forward chaining; risoluzione → ragionamento per refutazione; modus ponens generalizzato → backward chaining FOL",
@@ -19,26 +9,6 @@
     "answer": "modus ponens → forward chaining; risoluzione → ragionamento per refutazione; modus ponens generalizzato → backward chaining FOL",
     "explanation": "L’associazione corretta è: modus ponens → forward chaining, risoluzione → refutazione, modus ponens generalizzato → backward chaining FOL."
   },
-  {
-    "question": "In quale contesto abbiamo parlato di post-pruning?",
-    "options": [
-      "problemi di soddisfacimento di vincoli",
-      "apprendimento automatico",
-      "problemi con avversario"
-    ],
-    "answer": "apprendimento automatico",
-    "explanation": "Il post-pruning è una tecnica utilizzata in apprendimento automatico per semplificare gli alberi di decisione dopo l’addestramento."
-  },
-    {
-      "question": "Da quale dei seguenti insiemi di formule, applicando la regola di risoluzione più volte, ottengo come risultato la formula (not B or C)?",
-      "options": [
-        "(not A and not B and Z), (not Z and D), (not D and C)",
-        "(not A or not B or Z), (not Z or D), (not D or C)",
-        "(A and not B => Z), (Z => D), (D => C)"
-      ],
-      "answer": "(not A or not B or Z), (not Z or D), (not D or C)",
-      "explanation": "Applicando la risoluzione tra (not A or not B or Z) e (not Z or D) si ottiene (not A or not B or D). Poi con (not D or C) si ottiene (not A or not B or C), e quindi (not B or C) come clausola risolvente successiva."
-    },
     {
       "question": "L’algoritmo minimax ... (completa scegliendo l’opzione corretta)",
       "options": [
@@ -145,16 +115,6 @@
     "explanation": "Il Situation Calculus è un formalismo logico usato per rappresentare dinamicamente come cambia lo stato del mondo nel tempo a causa delle azioni."
   },
   {
-    "question": "In quale contesto abbiamo parlato di post-pruning?",
-    "options": [
-      "apprendimento automatico",
-      "problemi con avversario",
-      "problemi di soddisfacimento di vincoli"
-    ],
-    "answer": "apprendimento automatico",
-    "explanation": "Il post-pruning è una tecnica tipica dell'apprendimento automatico, soprattutto nella potatura di alberi decisionali."
-  },
-  {
     "question": "Da quale dei seguenti insiemi di formule, applicando la regola di risoluzione più volte, ottengo come risultato la formula (not B or C)?",
     "options": [
       "(A and not B => Z), (Z => D), (D => C)",
@@ -233,16 +193,6 @@
       ],
       "answer": "(not A or not B or Z), (not Z or D), (not D or C)",
       "explanation": "Le formule nella terza opzione sono già in forma di clausole disgiuntive. Applicando la risoluzione in sequenza si ottiene (¬B ∨ C)."
-    },
-    {
-      "question": "In quale contesto abbiamo parlato di post-pruning?",
-      "options": [
-        "apprendimento automatico",
-        "problemi con avversario",
-        "problemi di soddisfacimento di vincoli"
-      ],
-      "answer": "problemi con avversario",
-      "explanation": "Il post-pruning si applica nella costruzione di alberi decisionali in contesti con avversario, per evitare l’overfitting."
     },
     {
       "question": "Che cos'è un albero di decisione nell'apprendimento automatico?",
@@ -632,16 +582,6 @@
       ],
       "answer": "Una che sottostima il costo reale",
       "explanation": "Un’euristica è ammissibile se non sovrastima mai il costo reale per raggiungere lo stato obiettivo, quindi fornisce una stima inferiore o uguale al costo vero."
-    },
-    {
-      "question": "Quale delle seguenti misure viene calcolata tramite una matrice di confusione?",
-      "options": [
-        "accuratezza",
-        "information gain",
-        "entropia"
-      ],
-      "answer": "accuratezza",
-      "explanation": "La matrice di confusione viene utilizzata per calcolare misure come accuratezza, precisione, richiamo e F1-score, non information gain o entropia."
     },
     {
       "question": "La formula 'not Alfa(x) or not Beta(x) or not Gamma(x)' è una clausola?",
@@ -1380,16 +1320,6 @@
               "explanation": "L’entropia è una misura di impurità o incertezza nei dati, non una metrica derivabile dalla matrice di confusione."
             },
             {
-              "question": "Quale delle seguenti misure viene calcolata tramite una matrice di confusione?",
-              "options": [
-                "Information gain",
-                "Error rate",
-                "Accuratezza"
-              ],
-              "answer": "Accuratezza",
-              "explanation": "L'accuratezza è una misura che si ottiene direttamente dalla matrice di confusione come rapporto tra predizioni corrette e totale delle predizioni."
-            },
-            {
               "question": "Date due euristiche ammissibili h1 e h2, quando h1 è dominante su h2?",
               "options": [
                 "Per ogni nodo n, h1(n)≥h2(n)",
@@ -1419,17 +1349,6 @@
               "answer": "Funzione costante zero",
               "explanation": "Una funzione euristica costante pari a zero non fornisce nessuna informazione utile per guidare la ricerca."
             },
-
-              {
-                "question": "Indicare quale delle seguenti è la definizione di unificatore di due formule espresse nella logica del prim’ordine:",
-                "options": [
-                  "Sostituzione delle variabili che rende identiche le due formule",
-                  "Associazione fra i concetti affini di due KB differenti",
-                  "Regola di inferenza che, date due clausole, restituisce il loro risolvente"
-                ],
-                "answer": "Sostituzione delle variabili che rende identiche le due formule",
-                "explanation": "L’unificatore è una sostituzione che rende due formule identiche, utile nella risoluzione logica."
-              },
               {
                 "question": "Cosa si intende per frame problem?",
                 "options": [
@@ -1511,26 +1430,6 @@
                   "explanation": "Minimax valuta tutte le mosse possibili e suggerisce quella più vantaggiosa per il giocatore Max, assumendo un avversario perfetto."
                 },
                 {
-                  "question": "Il test di Turing dice che un computer è intelligente se:",
-                  "options": [
-                    "Imita il comportamento umano",
-                    "È in grado di manifestare emozioni",
-                    "Comprende le domande che gli vengono proposte"
-                  ],
-                  "answer": "Imita il comportamento umano",
-                  "explanation": "Il test di Turing valuta se una macchina può imitare il comportamento umano al punto da risultare indistinguibile da una persona."
-                },
-                {
-                  "question": "Sulla base di cosa l’algoritmo K Nearest Neighbour restituisce la classe di appartenenza di un’istanza?",
-                  "options": [
-                    "Combinazione lineare di pesi delle varie connessioni moltiplicanti per i relativi input",
-                    "Soddisfacimento dell’antecedente di una regola indotta dal learning set",
-                    "Somiglianza dell’istanza a k istanze memorizzate, le più simili ad essa"
-                  ],
-                  "answer": "Somiglianza dell’istanza a k istanze memorizzate, le più simili ad essa",
-                  "explanation": "KNN assegna la classe osservando le classi delle k istanze più simili nel training set, secondo una metrica di distanza."
-                },
-                {
                   "question": "Indicare quale delle seguenti è la definizione di unificatore di due formule espresse nella logica del prim’ordine:",
                   "options": [
                     "Associazione fra i concetti affini di due KB differenti",
@@ -1549,16 +1448,6 @@
                   ],
                   "answer": "Back-jumping",
                   "explanation": "Il back-jumping è più efficiente perché evita di esplorare inutilmente parti dell’albero che non portano a soluzioni valide."
-                },
-                {
-                  "question": "Nella costruzione di alberi di decisione con pre-pruning quale dei seguenti può essere un criterio per decidere che un nodo sarà una foglia?",
-                  "options": [
-                    "Il numero di istanze propagate al nodo è minore di una certa soglia",
-                    "La funzione di valutazione restituisce un valore maggiore di una certa soglia",
-                    "L’entropia restituisce 1"
-                  ],
-                  "answer": "Il numero di istanze propagate al nodo è minore di una certa soglia",
-                  "explanation": "Con il pre-pruning si può fermare la crescita dell'albero se il numero di istanze al nodo è troppo basso per garantire generalizzazione."
                 },
                 {
                   "question": "Che cosa differenzia un problema di ricerca di una soluzione informato da uno non informato?",
@@ -1671,26 +1560,6 @@
                     "answer": "Proprietà che l’applicazione dell’azione modifica",
                     "explanation": "Il situation calculus si concentra su condizioni pre e post-condizione di un'azione, non sulle proprietà che essa cambia direttamente."
                   },
-                  {
-                    "question": "Quale dei seguenti potrebbe essere un modello nella logica proposizionale?",
-                    "options": [
-                      "X vale Giovanni, Y vale Riccardo",
-                      "X vale true , Y vale false",
-                      "X vale 4, Y vale 2"
-                    ],
-                    "answer": "X vale true , Y vale false",
-                    "explanation": "Nella logica proposizionale, un modello assegna valori di verità (true/false) ai simboli proposizionali."
-                  },
-                  {
-                    "question": "Quale dei seguenti meccanismi non serve per indurre regole di classificazione?",
-                    "options": [
-                      "K nearest neighbour",
-                      "Specific to general",
-                      "General to specific"
-                    ],
-                    "answer": "K nearest neighbour",
-                    "explanation": "KNN è un classificatore basato sulla memoria e distanza, non genera regole simboliche esplicite."
-                  },
                     {
                       "question": "Quali delle seguenti regole di inferenza permette di implementare la dimostrazione per refutazione?",
                       "options": [
@@ -1720,16 +1589,6 @@
                       ],
                       "answer": "La conoscenza è costituita da triple <soggetto, predicato, oggetto>",
                       "explanation": "RDF rappresenta la conoscenza come insiemi di triple: soggetto, predicato e oggetto."
-                    },
-                    {
-                      "question": "Il back-jumping è:",
-                      "options": [
-                        "Un algoritmo di ricerca informato",
-                        "Un algoritmo per la soluzione di problemi con vincoli",
-                        "Un’euristica ottimale"
-                      ],
-                      "answer": "Un algoritmo per la soluzione di problemi con vincoli",
-                      "explanation": "Il back-jumping è una tecnica per l’efficiente esplorazione nei CSP, che salta indietro più di un livello quando incontra un fallimento."
                     },
                     {
                       "question": "In quale contesto abbiamo parlato di post-pruning?",
